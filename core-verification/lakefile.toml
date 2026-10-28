@@ -1,0 +1,30 @@
+name = "softfloat-core-verification"
+version = "0.1.0"
+# Mathlib sets requiresModuleSystem, so Lake warns when a file without a
+# `module` header imports it. The files here do not use the module system.
+allowNonModules = true
+defaultTargets = ["SoftFloatCoreSpec", "SoftFloatCoreProof", "SoftFloatCoreClaim"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "softfloat-core-operators"
+path = "../core-operators"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.35.0"
+
+[[lean_lib]]
+name = "SoftFloatCoreSpec"
+globs = ["SoftFloat.Core.Spec.*"]
+
+[[lean_lib]]
+name = "SoftFloatCoreProof"
+globs = ["SoftFloat.Core.Proof.*"]
+
+[[lean_lib]]
+name = "SoftFloatCoreClaim"
+globs = ["SoftFloat.Core.Claim.*"]

@@ -1,0 +1,8 @@
+*.ilean
+*.olean
+*.trace
+.direnv/
+.lake/
+logs/
+tmp/
+.lake-build.lock
