@@ -1,0 +1,119 @@
+# The constraints scripts/check-package-dependencies.sh judges the packages and
+# the layers against. Each rule names, under a package (softfloat-<directory>)
+# or a layer (<target>-<layer>), what it must require or import directly
+# (requires), that those are all it requires or imports directly (only), and
+# what it must not reach, directly or through others (forbids). A violation
+# names the rule whose constraint it breaks.
+
+- rule: separate-operators-and-verification-packages-for-each-target
+  description: >-
+    Each target has its operators and its verification as Lake packages of
+    their own. The verification requires the operators of the same target and
+    Mathlib, and the verification of RISCV also the verification of Core;
+    nothing else.
+  dependencies:
+    softfloat-core-verification:
+      requires: [softfloat-core-operators, mathlib]
+      only: true
+    softfloat-riscv-verification:
+      requires: [softfloat-riscv-operators, softfloat-core-verification, mathlib]
+      only: true
+
+- rule: base-and-operations-depend-on-no-mathlib
+  description: >-
+    The packages of the operators, and the layers of the base and the
+    operations, reach neither Mathlib nor the verification, so a user of the
+    operations alone does not get Mathlib.
+  dependencies:
+    softfloat-core-operators:
+      requires: []
+      only: true
+    softfloat-riscv-operators:
+      requires: [softfloat-core-operators]
+      only: true
+    core-base:
+      requires: []
+      only: true
+    core-operators:
+      requires: [core-base]
+      only: true
+    riscv-base:
+      requires: [core-base]
+      only: true
+    riscv-operators:
+      requires: [core-base, core-operators, riscv-base]
+      only: true
+
+- rule: specification-does-not-depend-on-operations
+  description: >-
+    The specifications import only the bases and Mathlib (and the
+    specification of RISCV the specification of Core), and do not reach the
+    operations, directly or through others.
+  dependencies:
+    core-spec:
+      requires: [core-base, mathlib]
+      only: true
+    riscv-spec:
+      requires: [core-spec, core-base, riscv-base]
+      only: true
+      forbids: [core-operators, riscv-operators]
+
+- rule: specification-does-not-depend-on-proof
+  description: >-
+    The proofs import only the specifications and the operations (and those of
+    Core), the claims only the proofs and what their statements use, and the
+    specifications do not reach the proofs.
+  dependencies:
+    core-proof:
+      requires: [core-spec, core-operators]
+      only: true
+    core-claim:
+      requires: [core-proof, core-spec, core-operators]
+      only: true
+    core-spec:
+      forbids: [core-proof]
+    riscv-proof:
+      requires: [riscv-spec, riscv-operators, core-proof, core-spec, core-operators]
+      only: true
+    riscv-claim:
+      requires: [riscv-proof, riscv-spec, riscv-operators, riscv-base, core-claim, core-spec]
+      only: true
+    riscv-spec:
+      forbids: [core-proof, riscv-proof]
+
+- rule: test-depends-only-on-operations
+  description: >-
+    The testing of RISCV imports only the operations of RISCV, so its
+    executable builds without Mathlib.
+  dependencies:
+    riscv-test:
+      requires: [riscv-operators]
+      only: true
+
+- rule: core-does-not-depend-on-riscv
+  description: >-
+    Core reaches nothing of RISCV, so that it can be cut out mechanically. A
+    layer of RISCV may depend on the same layer of Core and those below it.
+  dependencies:
+    softfloat-core-operators:
+      forbids: [softfloat-riscv-operators, softfloat-riscv-verification]
+    softfloat-core-verification:
+      forbids: [softfloat-riscv-operators, softfloat-riscv-verification]
+    core-base:
+      forbids: [riscv-base, riscv-operators, riscv-spec, riscv-proof, riscv-claim, riscv-test]
+    core-operators:
+      forbids: [riscv-base, riscv-operators, riscv-spec, riscv-proof, riscv-claim, riscv-test]
+    core-spec:
+      forbids: [riscv-base, riscv-operators, riscv-spec, riscv-proof, riscv-claim, riscv-test]
+    core-proof:
+      forbids: [riscv-base, riscv-operators, riscv-spec, riscv-proof, riscv-claim, riscv-test]
+    core-claim:
+      forbids: [riscv-base, riscv-operators, riscv-spec, riscv-proof, riscv-claim, riscv-test]
+    riscv-base:
+      forbids: [core-operators, core-spec, core-proof, core-claim]
+    riscv-operators:
+      forbids: [core-spec, core-proof, core-claim]
+    riscv-spec:
+      forbids: [core-claim]
+    riscv-proof:
+      forbids: [core-claim]

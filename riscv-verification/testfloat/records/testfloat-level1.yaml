@@ -1,0 +1,3673 @@
+level: 1
+recorded_at: 20261028T115925Z
+fingerprint: 8ea5a35fa6574c3949ea4fe3adbd875187e0d14a4c7e7f9b6cbaf0da7588b397
+oracle: /nix/store/ndw8z6ss8gl7mcklk31ccz12gfczjihb-berkeley-testfloat-3-riscv-3e-unstable-2025-03-07/bin/testfloat_gen
+seed: 1
+arch: x86_64
+results:
+  - rounding_mode: near_even
+    op: f16_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 715d854a03e0aaefdd93cfa5430b6856785ef035176b6fb095e0818bca9927d5
+    matched: true
+  - rounding_mode: near_even
+    op: f16_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 8a3fe83fc989e8426c3a53262c5eeeabf531cf3e21158687f19bdd882a0a7c3b
+    matched: true
+  - rounding_mode: near_even
+    op: f16_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: cc3f737d66a22458f414fd7b42ad86c9e5a1cfd6ed847ad3aa736984ac411dd4
+    matched: true
+  - rounding_mode: near_even
+    op: f16_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 17f6abb8f5bc8a59bcf0f1db59c9e152e240735839cf7f1a38e0d5facb92cfeb
+    matched: true
+  - rounding_mode: near_even
+    op: f16_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 408
+    oracle_sha256: dfffab309353dd48497e616cfd418bf9d4de4ff5a86943b4b25e2abdd6d75343
+    matched: true
+  - rounding_mode: near_even
+    op: f16_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 22b0e0d9734979b3619fb9140c7c287f35e0208e0623e70c78eaa51f6e027d75
+    matched: true
+  - rounding_mode: near_even
+    op: f16_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 408
+    oracle_sha256: 98a8f9fea41e0f28f4748e1a2c92411a982a2c56e3e0b788c5aff58c5d5c28a3
+    matched: true
+  - rounding_mode: near_even
+    op: f16_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 408
+    oracle_sha256: f803e0e1bc496195a90efca197037bbdd223126c4863beb856260df116003a32
+    matched: true
+  - rounding_mode: near_even
+    op: f16_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 7d167380ab65d132857e1ff07dc9369f6a351a7ed4a070d555581eef331fb92c
+    matched: true
+  - rounding_mode: near_even
+    op: f16_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F16.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17e66d047a04d814322939ec4802548e65022929249e37977962b6f7b1e72449
+    matched: true
+  - rounding_mode: near_even
+    op: f16_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 50aca9e67ced4f2ae3c78e212db1642dd3b80de88eedbc21a855c7e778ea4983
+    matched: true
+  - rounding_mode: near_even
+    op: f16_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 7df8f5977b897808244e0fb9a53aaa512900f60861313455d9987641f4bfe28a
+    matched: true
+  - rounding_mode: near_even
+    op: f16_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: f655eec589fd331b9d10c6b1a669df60ace0a8cf00561bcafc94e9dfaeb475c8
+    matched: true
+  - rounding_mode: near_even
+    op: f16_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 48b11f497afeaf0c64a0dcc9927b0efeba6cb45f703b122b6531e529dcce504d
+    matched: true
+  - rounding_mode: near_even
+    op: f16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: eb76af0e655a338c6fa4e96a7ebef138d10ff95829115cdbcf2be146f950e3e3
+    matched: true
+  - rounding_mode: near_even
+    op: f16_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: dffd0877df7a8219aa179b21414ed0f2066bccb78011648df00355f7c2402813
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 5630315dbc417fef559d4aa84101f6e6596f5526ae6bc55de3f608b1aadc9f51
+    matched: true
+  - rounding_mode: near_even
+    op: f64_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 614b579a4cfb6f6e035742d467809b40793daaca828940d93cb4c6ecb566d0b7
+    matched: true
+  - rounding_mode: near_even
+    op: f16_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 408
+    oracle_sha256: d69e86157696c59b7a33bf701d39f31ef79e8abfbcb6232aae5198c85391a728
+    matched: true
+  - rounding_mode: near_even
+    op: f16_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 408
+    oracle_sha256: 17c869000958fee6bce057cf8e299515b0809ed8d5e6534cc3dc9dff8dadb728
+    matched: true
+  - rounding_mode: near_even
+    op: f16_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 408
+    oracle_sha256: facf97858ed3d9290a0d812113aac991128270f1c58d5b848a8317ed44b93597
+    matched: true
+  - rounding_mode: near_even
+    op: f16_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 408
+    oracle_sha256: 0ff1238f8325b01ace659a9d813bec98322d5f8934d7459629c826efb30062e7
+    matched: true
+  - rounding_mode: near_even
+    op: i32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: b86b44a95abf2435fae88e26b8d4740a9732927425b72a6378301fabe5a77819
+    matched: true
+  - rounding_mode: near_even
+    op: ui32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: a6c7e26152dfb0e8fb87119f514627b542d7d63f48d5641dedd71d96ee6b55c6
+    matched: true
+  - rounding_mode: near_even
+    op: i64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 54eb8a5762533c912cc199763e65a74c5447238907909f9875f3da5497eb1bd2
+    matched: true
+  - rounding_mode: near_even
+    op: ui64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 7a1ecb500bf4cb76d760d43503ee1068fc18e704c67a592baf5ee6da7b65de30
+    matched: true
+  - rounding_mode: near_even
+    op: f32_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: ae0ce6172bd7c47651780edcdde3b4698ec11dc34f8997a005775dff65f28954
+    matched: true
+  - rounding_mode: near_even
+    op: f32_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 33f9b3ae2ba001cc6c928141ebccb4ae0bfdceca6f5236b7c04d48dc2845fdf7
+    matched: true
+  - rounding_mode: near_even
+    op: f32_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 1e80191cf4fb644372257b096888e51678a4fdb0097da9595f269bbb64902522
+    matched: true
+  - rounding_mode: near_even
+    op: f32_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 1efea79460de5f9e0fcbf4433f03a66b87cb181e268d36a034de6fdde047cb73
+    matched: true
+  - rounding_mode: near_even
+    op: f32_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 600
+    oracle_sha256: 31b1202668dad6f0710968f5798e9421e18ee1d317f6c616b20f12b43e5c27eb
+    matched: true
+  - rounding_mode: near_even
+    op: f32_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 592f7c74b962a645ba833dcc3b8bf7b782fd43cdea1a1596c167d4f7ee938d0d
+    matched: true
+  - rounding_mode: near_even
+    op: f32_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 600
+    oracle_sha256: 0c99350f6a7a88747b416be529f9f24ec47b196a8276150eef25c3f30f47bd96
+    matched: true
+  - rounding_mode: near_even
+    op: f32_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 600
+    oracle_sha256: 6312949b86ec6ee6d6492d627bd4466e0227b7bf06548b7fc1ef087d8bb2f520
+    matched: true
+  - rounding_mode: near_even
+    op: f32_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 219d81e41e7c82937b672cf47e63451b73ef0264f29c179b4d741ba16aaeeea8
+    matched: true
+  - rounding_mode: near_even
+    op: f32_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F32.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: ba122b226356304d1e575f5c7bbea765cc6cc76a107045f36a5276bc882de672
+    matched: true
+  - rounding_mode: near_even
+    op: f32_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 5044e606bddf08b8396f41c9567a09e1a0d280a23a5311913d5a8c12709463d7
+    matched: true
+  - rounding_mode: near_even
+    op: f32_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 0e6ed521892ac4ba26aa3ba3ba6f4d0f99cd1f122fda323d8aed8261dab1c6ee
+    matched: true
+  - rounding_mode: near_even
+    op: f32_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: ee40b3521408419412ed538ea0fadcfef6c6a88fea55bb114ac88ea5a98ed8a2
+    matched: true
+  - rounding_mode: near_even
+    op: f32_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 31772e8335bff4affa245ea59f42e265d892ecc7b1fb551c2ae7ee448e691c00
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: b7c4bf861e8c479bf915a076d727ad9eb85eb11b583321c1f3296d6b7ba187de
+    matched: true
+  - rounding_mode: near_even
+    op: f64_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: ee963f3b04d5a10954c98e0ef5195293443019285785f46b1366674cd0b84623
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 600
+    oracle_sha256: bd8eb726b1d41eeaa76f1e13df92b54584779c1b7de79ab869116e8db71d2d56
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 600
+    oracle_sha256: 154eaa4015826c57293e41aa2e03e9366c8026a235b3a713e74212ffd706180b
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 600
+    oracle_sha256: f04df278323973634be7f3e85b344d93590b5c5b8f3c44576c5265263b8736ac
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 600
+    oracle_sha256: 7a8da380e5787c3deb4fa95a4e46963dcfee14c16f05e9c9839f7fbbdb382d69
+    matched: true
+  - rounding_mode: near_even
+    op: i32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: f5c5ee6b9beeb7b4bb4c63e96ba455645eacd0a8c25e7e2e893648dfc7fe56e0
+    matched: true
+  - rounding_mode: near_even
+    op: ui32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 25722f1bbaf5855b0ed7556031f307d2ed7fc7a255ebfcbeb2461c846f6dc9cb
+    matched: true
+  - rounding_mode: near_even
+    op: i64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 3fb9a87753045e017b53d0da98e93a1da2ebc8d51fcbe1a6c452ac5d23668adb
+    matched: true
+  - rounding_mode: near_even
+    op: ui64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: fcf0f386355f8eae278918c76d2571e1363448bd06dce38d421ac04b812a6095
+    matched: true
+  - rounding_mode: near_even
+    op: f64_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: d562819f7b79ee3b6c72f8bb54ace2b70f95c956f92df538adc7974267f470e5
+    matched: true
+  - rounding_mode: near_even
+    op: f64_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: c6bd35f40ae36382d78a525afa9975b610e59470ab1a9d4895bc24f222bc9a00
+    matched: true
+  - rounding_mode: near_even
+    op: f64_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: e319a23264a301bde9f9fc0d43d4d74c5c7bef104aaab1d650da23290f801645
+    matched: true
+  - rounding_mode: near_even
+    op: f64_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: a650e328c3fa8b95aed366d625727418970467ad8faa519945a8b0ae21c94e9b
+    matched: true
+  - rounding_mode: near_even
+    op: f64_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 768
+    oracle_sha256: 74c9077bf421a4a98b59661633dcd5da94799c8d4f871d304479f24da6ecef45
+    matched: true
+  - rounding_mode: near_even
+    op: f64_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 8135748a984070bd62cc53b2da3b86615b0eb214cb850634fbbdf42b9824ba11
+    matched: true
+  - rounding_mode: near_even
+    op: f64_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 768
+    oracle_sha256: 89b2cfce124119a38e7d26e589fdc044fa76b5a467b8b46f5218704a8fb26cb5
+    matched: true
+  - rounding_mode: near_even
+    op: f64_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 768
+    oracle_sha256: ef3caf370d05085c9e53b32beabab99277cbd476348c4e587a7407672973856e
+    matched: true
+  - rounding_mode: near_even
+    op: f64_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 034c1b050a771cfa040253ced0b2c540205b3feffacee2cd77aa6536bd8eb2f2
+    matched: true
+  - rounding_mode: near_even
+    op: f64_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F64.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 75db3d79e574df8228247579b532e5f67fc83c7622a742c92ae2dc7aae37a909
+    matched: true
+  - rounding_mode: near_even
+    op: f64_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 83bb30ff9c09aa0818186e345d730a7264580ae340a5d18c2219d91966107eba
+    matched: true
+  - rounding_mode: near_even
+    op: f64_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: df9e3b8935ab2a54ac5680714772e750df6c30bb15d1c149e52a626944977bdb
+    matched: true
+  - rounding_mode: near_even
+    op: f64_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: c0ae8abe82964681a19c1d2a1ff377e5a874d59dc338d1a2903ea629ba46e2ef
+    matched: true
+  - rounding_mode: near_even
+    op: f64_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 40ce5648de629c39b2c8d23d43ce32ac9ea76fef91234583922475fbeeefd3e5
+    matched: true
+  - rounding_mode: near_even
+    op: f64_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 768
+    oracle_sha256: ae8bb3e2439a8a266461557ba9aaf7eb085c5071f53c1a0c6156c5237238e643
+    matched: true
+  - rounding_mode: near_even
+    op: f64_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 768
+    oracle_sha256: 007212e0f5ee51b6875a9356c23ddbd1bbb671e45408009bced6f7a0101b8eb7
+    matched: true
+  - rounding_mode: near_even
+    op: f64_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 768
+    oracle_sha256: 5a8843285f6993a4b4da7c2594ac707bbc3f61a25e4958b54ad75e4ded9bf186
+    matched: true
+  - rounding_mode: near_even
+    op: f64_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 768
+    oracle_sha256: 8de85e58134c4723e07b8a75b62b6b70acaac18929f9218ac37d03768eee6af4
+    matched: true
+  - rounding_mode: near_even
+    op: i32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 3c7a953970f1e0f3045a3fd92ef364bcd130b168de2d5a3c7288e055a1d064c6
+    matched: true
+  - rounding_mode: near_even
+    op: ui32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 03417b47cdeea24446593adec8aa0d8207d5d96039ace12b49d31e600d5e1e9a
+    matched: true
+  - rounding_mode: near_even
+    op: i64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 4d4db1e9a5b61a2f117aacfc0f450b1e16ea244a19182c07b0472e695062599b
+    matched: true
+  - rounding_mode: near_even
+    op: ui64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 75756b9cf6f7e66badebdf129ddd815339a8af17395041a889f8deaed66836a7
+    matched: true
+  - rounding_mode: near_even
+    op: f128_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: fc3dd4df0fc1db1eeef5a00e4e5bac8e6470106cc1e32b6ece97e4e0897b0fc0
+    matched: true
+  - rounding_mode: near_even
+    op: f128_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 5f262f01ef0705f89114f40c73bd664aa33642c6e0b759e61feb91a32aa1221f
+    matched: true
+  - rounding_mode: near_even
+    op: f128_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 8825289b677f2084e47850e17d1e8c56252cab8b8f2658d2b81c42f115f4106b
+    matched: true
+  - rounding_mode: near_even
+    op: f128_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: ea903020d237ac5de18ce4c9da6b98cddc13246f9074c75bd9ea5398575b8c7f
+    matched: true
+  - rounding_mode: near_even
+    op: f128_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 936
+    oracle_sha256: 6c631dd61847c114c78edee0498e9189b950acb67c3a3155c43e31597e73e1d6
+    matched: true
+  - rounding_mode: near_even
+    op: f128_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: a0d7be657b110fa2af25e1e9e2d10c95823c37cf66c4dc00357061326eb04f8c
+    matched: true
+  - rounding_mode: near_even
+    op: f128_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 936
+    oracle_sha256: 5f97e675ee7c4f1e0df43c4e6581c3d9aa546a852e020fe7bffb2a8e1ac5f13f
+    matched: true
+  - rounding_mode: near_even
+    op: f128_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 936
+    oracle_sha256: ce33d336d2aa14c99753e56858419453b34b6586eed09f21e7ca88b17bc7063c
+    matched: true
+  - rounding_mode: near_even
+    op: f128_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: c7e441e9f058b62a5cad48210bda0125e074e0249a225fa2e8b67ae10e9390a6
+    matched: true
+  - rounding_mode: near_even
+    op: f128_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F128.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17540dc9195f001fc71e8d2f2c350b23e27bcdc986361a0eb9709b094a4a988f
+    matched: true
+  - rounding_mode: near_even
+    op: f128_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 91c29f810dbc21c4ffc0f65146a6679fdec482d25c5162794dd25e335a43acdb
+    matched: true
+  - rounding_mode: near_even
+    op: f128_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: d5348156ea1ec4385823a7d3b05ec2e9d38344004dc945ad817156bf2fec7963
+    matched: true
+  - rounding_mode: near_even
+    op: f128_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: 5a50bd6f2489009b588646e455bfa4b4f4e968207777b9c5156d46dd08ad79bf
+    matched: true
+  - rounding_mode: near_even
+    op: f128_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 93415105fc9d73c4d10b3706bc03862383bdee50c1e5b4083c583e47bada7fb1
+    matched: true
+  - rounding_mode: near_even
+    op: f16_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: f3ed4b946061cf29cea85ce991d50669fe36efd01c1620b35d66e4dbbc7c8d74
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: a0c2c3e0646784ca0e082ac685f9cecb6806a1665572029af1ae4bac524b161b
+    matched: true
+  - rounding_mode: near_even
+    op: f64_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 5549b35ca3e5adeb829f393a2f79a0782090b04ebec5b8e251c2f8bafb50f5a4
+    matched: true
+  - rounding_mode: near_even
+    op: f128_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 1bdbdd2698bc0fe04565eaabee4497286aea2cdf21873fe9f121b9ef324160bf
+    matched: true
+  - rounding_mode: near_even
+    op: f128_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 93b98fe7d5eb65c06c7a208db529bf64784f437d52db031d05c10cb6c62bd84e
+    matched: true
+  - rounding_mode: near_even
+    op: f128_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 33f71eced161164639a09a89b562f03e4cecd431e8e5976c24222a0645bbc76f
+    matched: true
+  - rounding_mode: near_even
+    op: f128_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 936
+    oracle_sha256: b6bfd208b83ba91fb60c1cfb417e4daab3ff2b01b9c60a36c6248f850f9a599c
+    matched: true
+  - rounding_mode: near_even
+    op: f128_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 936
+    oracle_sha256: 4a1fb9c4af2172f15f9b888b47930e04bc3112d97ecd32fd236047c3ece93bbf
+    matched: true
+  - rounding_mode: near_even
+    op: f128_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 936
+    oracle_sha256: 1b5089c34d6254c30f363d240f3dab3fe11358923ef305182ad20798f507827c
+    matched: true
+  - rounding_mode: near_even
+    op: f128_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 936
+    oracle_sha256: 7a2e253cb6065371b057b9104c14033577f9f8dcce807397490e96a3f587afd3
+    matched: true
+  - rounding_mode: near_even
+    op: i32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 02e378795ebac3a041006bc608a35c3416ba7bcb5a56e6e36e22204cb07ee5a7
+    matched: true
+  - rounding_mode: near_even
+    op: ui32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 54dde39d543f36492e9f557b98442d4072cc45a3592443880a697e2e4c7008ec
+    matched: true
+  - rounding_mode: near_even
+    op: i64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 831da019314d4b0ad0676e159da2e3a3fbb0c29b9f59180abf4a1aec6ba84b47
+    matched: true
+  - rounding_mode: near_even
+    op: ui64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: f2a47c89004bfbf7a34d37f6ba95fa72a77862143f492dabf60ae6ed534e29b9
+    matched: true
+  - rounding_mode: near_even
+    op: f32_to_bf16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: cdeeb887ff2419dbab45fd7ebfd7159901d520474a81cf4eb067903ce85f87b4
+    matched: true
+  - rounding_mode: near_even
+    op: bf16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 70989dceb6863bb481d3f5c8770c3a4a41655dac8c3968b4dcd4aecf7c964c9d
+    matched: true
+  - rounding_mode: minMag
+    op: f16_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 9159748a33a3c4396157b7066a5d335c6fa9ae79552d55b803ab993f94622473
+    matched: true
+  - rounding_mode: minMag
+    op: f16_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 4ddd0641e4b032f231376d89e5e1ef609ad147ee0e59cbbcd2fd07be15d6752a
+    matched: true
+  - rounding_mode: minMag
+    op: f16_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: aaded91eeea456e96d7a276d875d1640d86ce921575e6253fbc6749d322b35dc
+    matched: true
+  - rounding_mode: minMag
+    op: f16_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 5e8e8e726206fa09913faba3d350d1225e1dea9a29f0fc57564bf8ca96f88474
+    matched: true
+  - rounding_mode: minMag
+    op: f16_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 408
+    oracle_sha256: 773612f7f727e5f0eb688274347cf19241853ce8fff1e579cfb61c2c7e79b104
+    matched: true
+  - rounding_mode: minMag
+    op: f16_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 9cee9c9885c7785bc2b2975193d6689d7602af5d5e74b0fe8e2f4f0ae6584b03
+    matched: true
+  - rounding_mode: minMag
+    op: f16_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 408
+    oracle_sha256: 9a6c310f43dcdaeff837970f85fdc6b037c3c8a20ab61ec891ee3727f78a4e74
+    matched: true
+  - rounding_mode: minMag
+    op: f16_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 408
+    oracle_sha256: b21d43f16fe43c10d3896ac34b44323cd55e516b5711d51f5bb9d838ecf55031
+    matched: true
+  - rounding_mode: minMag
+    op: f16_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 7d167380ab65d132857e1ff07dc9369f6a351a7ed4a070d555581eef331fb92c
+    matched: true
+  - rounding_mode: minMag
+    op: f16_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F16.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17e66d047a04d814322939ec4802548e65022929249e37977962b6f7b1e72449
+    matched: true
+  - rounding_mode: minMag
+    op: f16_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 50aca9e67ced4f2ae3c78e212db1642dd3b80de88eedbc21a855c7e778ea4983
+    matched: true
+  - rounding_mode: minMag
+    op: f16_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 7df8f5977b897808244e0fb9a53aaa512900f60861313455d9987641f4bfe28a
+    matched: true
+  - rounding_mode: minMag
+    op: f16_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: f655eec589fd331b9d10c6b1a669df60ace0a8cf00561bcafc94e9dfaeb475c8
+    matched: true
+  - rounding_mode: minMag
+    op: f16_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 48b11f497afeaf0c64a0dcc9927b0efeba6cb45f703b122b6531e529dcce504d
+    matched: true
+  - rounding_mode: minMag
+    op: f16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: eb76af0e655a338c6fa4e96a7ebef138d10ff95829115cdbcf2be146f950e3e3
+    matched: true
+  - rounding_mode: minMag
+    op: f16_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: dffd0877df7a8219aa179b21414ed0f2066bccb78011648df00355f7c2402813
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 782cb1493693e3d51c91516686fb79fd191eaa5d7003a5d0a575a09407a97203
+    matched: true
+  - rounding_mode: minMag
+    op: f64_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 1ab6f867b879a80a24120c14c7ca664be75aca626c35705f317303ce3384237a
+    matched: true
+  - rounding_mode: minMag
+    op: f16_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 408
+    oracle_sha256: 2d77894898815374d373b806340fc46fd8e9687dd439d0e8d1b46f0ebd23fb3b
+    matched: true
+  - rounding_mode: minMag
+    op: f16_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 408
+    oracle_sha256: 4a0f61c2c99923ada186cd81e699fa72dac6c41d0504bc88c9c2d2dc3f259e1e
+    matched: true
+  - rounding_mode: minMag
+    op: f16_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 408
+    oracle_sha256: dfe0217b8e6d9e2d81f1dd232213a97496c947b48df345e6ffaaab71baa3719a
+    matched: true
+  - rounding_mode: minMag
+    op: f16_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 408
+    oracle_sha256: d9b22a704bda7652ebdbcff22a2e1ce50ff8bbf21b5f11844f7f5c7a4eb54857
+    matched: true
+  - rounding_mode: minMag
+    op: i32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: d2c30e66fabdf01dbfc454d0062c1005028f1fd39751b6cdc0069e5034039491
+    matched: true
+  - rounding_mode: minMag
+    op: ui32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 403334274a297436fa9ddf2e56d4db4d2f4acf371909e1357506968707b2f72d
+    matched: true
+  - rounding_mode: minMag
+    op: i64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: b5366a3a60a90320f29d208aa904e2f92336d65ac50d52a0e5ac4388d21511f7
+    matched: true
+  - rounding_mode: minMag
+    op: ui64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 6d2038d1475495ce210cc96a4d36a8db7752a8e79a8556907a68e57937bdc311
+    matched: true
+  - rounding_mode: minMag
+    op: f32_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 468695163be623c3b5f3ef33ed672262895a8cbef28ff39bc667b564433552fd
+    matched: true
+  - rounding_mode: minMag
+    op: f32_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: f3c24c2ab45d332958329987279e54776c0bbabe41005fae6e4cc94fa63c9d59
+    matched: true
+  - rounding_mode: minMag
+    op: f32_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 0f015faf030da4530dc140614ee9f106b3e451e62bdbf00f42b6c4c38c35a309
+    matched: true
+  - rounding_mode: minMag
+    op: f32_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 0cba84d7cdb0f2a08e31ed4dd84539a92062dd6a031442f9c7579e936c473471
+    matched: true
+  - rounding_mode: minMag
+    op: f32_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 600
+    oracle_sha256: 0a996d67b93823f82b1c8e131d868a5d537aebbb5c967ff6d3ea2b42337632e9
+    matched: true
+  - rounding_mode: minMag
+    op: f32_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 05ec0ffd9c5b47c213b1c06a7c2aa8ae2a3c2b3662099fdc07e16d1fbdfa6b97
+    matched: true
+  - rounding_mode: minMag
+    op: f32_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 600
+    oracle_sha256: e12cd116fcd6f966fcab96fe1462f3dbc9d0f9bea34c2fe5a841b9a0ab2d80ff
+    matched: true
+  - rounding_mode: minMag
+    op: f32_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 600
+    oracle_sha256: e158781dcb478e7681ae2f33a5e705e69056568042f6d81eab8353bfb706f522
+    matched: true
+  - rounding_mode: minMag
+    op: f32_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 219d81e41e7c82937b672cf47e63451b73ef0264f29c179b4d741ba16aaeeea8
+    matched: true
+  - rounding_mode: minMag
+    op: f32_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F32.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: ba122b226356304d1e575f5c7bbea765cc6cc76a107045f36a5276bc882de672
+    matched: true
+  - rounding_mode: minMag
+    op: f32_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 5044e606bddf08b8396f41c9567a09e1a0d280a23a5311913d5a8c12709463d7
+    matched: true
+  - rounding_mode: minMag
+    op: f32_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 0e6ed521892ac4ba26aa3ba3ba6f4d0f99cd1f122fda323d8aed8261dab1c6ee
+    matched: true
+  - rounding_mode: minMag
+    op: f32_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: ee40b3521408419412ed538ea0fadcfef6c6a88fea55bb114ac88ea5a98ed8a2
+    matched: true
+  - rounding_mode: minMag
+    op: f32_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 31772e8335bff4affa245ea59f42e265d892ecc7b1fb551c2ae7ee448e691c00
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: b7c4bf861e8c479bf915a076d727ad9eb85eb11b583321c1f3296d6b7ba187de
+    matched: true
+  - rounding_mode: minMag
+    op: f64_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: c712513f31f44c6a3b1559bfbd52346e9f0c7f201fa261afb61e2f2ab196e066
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 600
+    oracle_sha256: eba9bb882df8c8f75d0adc4af710be67f3c83b4ed2f4e49fa2d765c19eac0325
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 600
+    oracle_sha256: be57aa108f7c920072a18ef7b5136c8667b42b2d69982643c90987f6b718f3fb
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 600
+    oracle_sha256: b5a432bb9cf3fae27fa77781c3ad208646f3bb9d0820892659e88806646ba9a5
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 600
+    oracle_sha256: d1b02500c484da8f4b7b46d29309363913b82b83dce7f93343cfb18e56792027
+    matched: true
+  - rounding_mode: minMag
+    op: i32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 878332b396768dde9294d1c1569ab844712c21c2a7c2de036a980d1ab3c0eb05
+    matched: true
+  - rounding_mode: minMag
+    op: ui32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: cb2a6722ea8f6b87ae00a06d7e30be3eb62e871f9febc89ceb5f56dab0bf9be7
+    matched: true
+  - rounding_mode: minMag
+    op: i64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: a39855b2128e5769bdb2c37682399fc2f61c21f8f928d2e4d1863a562e910045
+    matched: true
+  - rounding_mode: minMag
+    op: ui64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 4077279a061a692fcd7c5944a622d54f61f113d510513bb9ebcae37bbfa866d4
+    matched: true
+  - rounding_mode: minMag
+    op: f64_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 4460122075d69df6a381e537a5424eb83d9e63a48aebabdc5f79eaef633cdbb5
+    matched: true
+  - rounding_mode: minMag
+    op: f64_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 41817b28e064bab92284db3bb14d4425cd3a657205d75b84bf2c060bb9fa57bd
+    matched: true
+  - rounding_mode: minMag
+    op: f64_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: bbdb8a98ffad702e550778f479dd07e58124af1f019ce3c869c4e39fd802b7e3
+    matched: true
+  - rounding_mode: minMag
+    op: f64_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 2edb4b0b0334b5ecd011f7eff78108c886fe9f3deb57397e0bf5f3a70735267e
+    matched: true
+  - rounding_mode: minMag
+    op: f64_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 768
+    oracle_sha256: 8b78e6413934564aea80bb38f5d08375e59ef25774727bd4a0a4b4392916ed95
+    matched: true
+  - rounding_mode: minMag
+    op: f64_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: a35489dc8d5370ca895edcadd32293e765e7a51b7d4059f01b5150ff71968160
+    matched: true
+  - rounding_mode: minMag
+    op: f64_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 768
+    oracle_sha256: 5677a610875f560ac42abf1e7b5ad7fbd4b55c6b88ffc662c358666bc5c6503b
+    matched: true
+  - rounding_mode: minMag
+    op: f64_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 768
+    oracle_sha256: 9ec1f94866432f0883df33e8f6e7dbea25f6dda4cf03d419b0c59dc1832a93ad
+    matched: true
+  - rounding_mode: minMag
+    op: f64_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 034c1b050a771cfa040253ced0b2c540205b3feffacee2cd77aa6536bd8eb2f2
+    matched: true
+  - rounding_mode: minMag
+    op: f64_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F64.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 75db3d79e574df8228247579b532e5f67fc83c7622a742c92ae2dc7aae37a909
+    matched: true
+  - rounding_mode: minMag
+    op: f64_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 83bb30ff9c09aa0818186e345d730a7264580ae340a5d18c2219d91966107eba
+    matched: true
+  - rounding_mode: minMag
+    op: f64_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: df9e3b8935ab2a54ac5680714772e750df6c30bb15d1c149e52a626944977bdb
+    matched: true
+  - rounding_mode: minMag
+    op: f64_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: c0ae8abe82964681a19c1d2a1ff377e5a874d59dc338d1a2903ea629ba46e2ef
+    matched: true
+  - rounding_mode: minMag
+    op: f64_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 40ce5648de629c39b2c8d23d43ce32ac9ea76fef91234583922475fbeeefd3e5
+    matched: true
+  - rounding_mode: minMag
+    op: f64_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 768
+    oracle_sha256: fe8e536aaa7a7c44d09a905d7396084ea77d9e357639b61401e7f3c68b579b29
+    matched: true
+  - rounding_mode: minMag
+    op: f64_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 768
+    oracle_sha256: 7401af3836ff44bc21566c00ee5ce92e5b6d57885259c6988c8c5eceb839fa7f
+    matched: true
+  - rounding_mode: minMag
+    op: f64_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 768
+    oracle_sha256: 57c56ee0055b756a39f9fa74e3e7d12d37aa37ec1d49fbaae206d5b023fbe620
+    matched: true
+  - rounding_mode: minMag
+    op: f64_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 768
+    oracle_sha256: 3a1fbd1b3f58d08377335cca203fce5977a83bd962a9607eda009ae28e5fc005
+    matched: true
+  - rounding_mode: minMag
+    op: i32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 3c7a953970f1e0f3045a3fd92ef364bcd130b168de2d5a3c7288e055a1d064c6
+    matched: true
+  - rounding_mode: minMag
+    op: ui32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 03417b47cdeea24446593adec8aa0d8207d5d96039ace12b49d31e600d5e1e9a
+    matched: true
+  - rounding_mode: minMag
+    op: i64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 17f7bd8c866d54b86c75635d159dfeed7f85c45d21fd3569aa121025ccca8f33
+    matched: true
+  - rounding_mode: minMag
+    op: ui64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 0061d3f984dec04a86093a463a158ec6a29987be95b88d1083c1f901edf58219
+    matched: true
+  - rounding_mode: minMag
+    op: f128_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: b963a072a59f7898ec8702ae8d31a48de00b56650b4a82807f9cef6e80c9f674
+    matched: true
+  - rounding_mode: minMag
+    op: f128_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 5f1e0b3fa085d5fc53bab4fa2f7df8a86e015246feb0ab279e2dfd9366c654f8
+    matched: true
+  - rounding_mode: minMag
+    op: f128_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 3dd7a24bebfcf5a4f227435578cd5a948db6b5d883280a696e8898221fd0ce22
+    matched: true
+  - rounding_mode: minMag
+    op: f128_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: e24ee6c964476309aec21f47444296a2605e90b4ca15a2cbe3ff5413bc904ddc
+    matched: true
+  - rounding_mode: minMag
+    op: f128_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 936
+    oracle_sha256: d095e0314ab98d9e88f20b332068aefd576c7866c8b98ace4ea2dfe280c02329
+    matched: true
+  - rounding_mode: minMag
+    op: f128_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: c53a6200678e39b4fe32ed76695173eefea978247af7f41ead8ee21062f7d4a3
+    matched: true
+  - rounding_mode: minMag
+    op: f128_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 936
+    oracle_sha256: e49c2532460b250cda9ca06abde34c4e727c3f37a619ee428857b1327428f779
+    matched: true
+  - rounding_mode: minMag
+    op: f128_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 936
+    oracle_sha256: 452fac97f036ee8153312f3701532c0f10607a207b4b8fc50d31803faee1ce10
+    matched: true
+  - rounding_mode: minMag
+    op: f128_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: c7e441e9f058b62a5cad48210bda0125e074e0249a225fa2e8b67ae10e9390a6
+    matched: true
+  - rounding_mode: minMag
+    op: f128_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F128.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17540dc9195f001fc71e8d2f2c350b23e27bcdc986361a0eb9709b094a4a988f
+    matched: true
+  - rounding_mode: minMag
+    op: f128_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 91c29f810dbc21c4ffc0f65146a6679fdec482d25c5162794dd25e335a43acdb
+    matched: true
+  - rounding_mode: minMag
+    op: f128_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: d5348156ea1ec4385823a7d3b05ec2e9d38344004dc945ad817156bf2fec7963
+    matched: true
+  - rounding_mode: minMag
+    op: f128_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: 5a50bd6f2489009b588646e455bfa4b4f4e968207777b9c5156d46dd08ad79bf
+    matched: true
+  - rounding_mode: minMag
+    op: f128_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 93415105fc9d73c4d10b3706bc03862383bdee50c1e5b4083c583e47bada7fb1
+    matched: true
+  - rounding_mode: minMag
+    op: f16_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: f3ed4b946061cf29cea85ce991d50669fe36efd01c1620b35d66e4dbbc7c8d74
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: a0c2c3e0646784ca0e082ac685f9cecb6806a1665572029af1ae4bac524b161b
+    matched: true
+  - rounding_mode: minMag
+    op: f64_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 5549b35ca3e5adeb829f393a2f79a0782090b04ebec5b8e251c2f8bafb50f5a4
+    matched: true
+  - rounding_mode: minMag
+    op: f128_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 57fb4318c43e5a026eb4f01205e4d9f8a6520f557a69f2f20ae72c122cdbed2f
+    matched: true
+  - rounding_mode: minMag
+    op: f128_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: f60eb2fc30d9fc7a17b841f1c9b1bb980f2c3f49693b98fc1a8542598d62259c
+    matched: true
+  - rounding_mode: minMag
+    op: f128_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: af70cecbbcaf1301698c20f08eab3396edc90e32df838d3f953fca28bf911569
+    matched: true
+  - rounding_mode: minMag
+    op: f128_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 936
+    oracle_sha256: 526875f815a5f9a3ead51a7551d9c11bec1b64c1eabbf60300c59bdabbbc31d7
+    matched: true
+  - rounding_mode: minMag
+    op: f128_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 936
+    oracle_sha256: 90d21a5188b9fd541facc5f44f9b370d394e9b609c40233c18aac177b286981b
+    matched: true
+  - rounding_mode: minMag
+    op: f128_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 936
+    oracle_sha256: 20e2375edc57b6839947ed7280b22e395223440c9610deb14961e8b519fd1e5e
+    matched: true
+  - rounding_mode: minMag
+    op: f128_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 936
+    oracle_sha256: e7e2f22720812372d93391e9dfdf58db618892ca3252d7c465fbd70d1ba277fd
+    matched: true
+  - rounding_mode: minMag
+    op: i32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 02e378795ebac3a041006bc608a35c3416ba7bcb5a56e6e36e22204cb07ee5a7
+    matched: true
+  - rounding_mode: minMag
+    op: ui32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 54dde39d543f36492e9f557b98442d4072cc45a3592443880a697e2e4c7008ec
+    matched: true
+  - rounding_mode: minMag
+    op: i64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 831da019314d4b0ad0676e159da2e3a3fbb0c29b9f59180abf4a1aec6ba84b47
+    matched: true
+  - rounding_mode: minMag
+    op: ui64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: f2a47c89004bfbf7a34d37f6ba95fa72a77862143f492dabf60ae6ed534e29b9
+    matched: true
+  - rounding_mode: minMag
+    op: f32_to_bf16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 6005e6721362ce7c14a4fb934be8111234a9595a1139c018e9c2bf67f2ce280e
+    matched: true
+  - rounding_mode: minMag
+    op: bf16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 70989dceb6863bb481d3f5c8770c3a4a41655dac8c3968b4dcd4aecf7c964c9d
+    matched: true
+  - rounding_mode: min
+    op: f16_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 060af88593d9643bb70e2e14cb7f4dae664d528dc2c9343f55cf53e200556027
+    matched: true
+  - rounding_mode: min
+    op: f16_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 86da1cc5c8b5052be7a45d6bca1ac410d59c0573f8a04b6dfa3253ddbfbbf893
+    matched: true
+  - rounding_mode: min
+    op: f16_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: f59e492ca5492ededceca08c30ab78c1b0f86cbbd113543ff9a278f4ef438047
+    matched: true
+  - rounding_mode: min
+    op: f16_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 43cdb60f7aac6d62d8f167d4430387291b9dc194969075514ee36306b099df98
+    matched: true
+  - rounding_mode: min
+    op: f16_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 408
+    oracle_sha256: 773612f7f727e5f0eb688274347cf19241853ce8fff1e579cfb61c2c7e79b104
+    matched: true
+  - rounding_mode: min
+    op: f16_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 574c318b7a822cd7e45774d1d6a41bb417a1825a4cc44b732d5cfe6f433dd34f
+    matched: true
+  - rounding_mode: min
+    op: f16_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 408
+    oracle_sha256: e1e6e04564433b5199a45f140f9984dad29cf2f908a92d2d302226789b64690c
+    matched: true
+  - rounding_mode: min
+    op: f16_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 408
+    oracle_sha256: 051dc1b88b8b625a4682ba2741cb70566b75c4167600d5931f5dc6560797ee37
+    matched: true
+  - rounding_mode: min
+    op: f16_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 7d167380ab65d132857e1ff07dc9369f6a351a7ed4a070d555581eef331fb92c
+    matched: true
+  - rounding_mode: min
+    op: f16_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F16.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17e66d047a04d814322939ec4802548e65022929249e37977962b6f7b1e72449
+    matched: true
+  - rounding_mode: min
+    op: f16_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 50aca9e67ced4f2ae3c78e212db1642dd3b80de88eedbc21a855c7e778ea4983
+    matched: true
+  - rounding_mode: min
+    op: f16_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 7df8f5977b897808244e0fb9a53aaa512900f60861313455d9987641f4bfe28a
+    matched: true
+  - rounding_mode: min
+    op: f16_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: f655eec589fd331b9d10c6b1a669df60ace0a8cf00561bcafc94e9dfaeb475c8
+    matched: true
+  - rounding_mode: min
+    op: f16_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 48b11f497afeaf0c64a0dcc9927b0efeba6cb45f703b122b6531e529dcce504d
+    matched: true
+  - rounding_mode: min
+    op: f16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: eb76af0e655a338c6fa4e96a7ebef138d10ff95829115cdbcf2be146f950e3e3
+    matched: true
+  - rounding_mode: min
+    op: f16_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: dffd0877df7a8219aa179b21414ed0f2066bccb78011648df00355f7c2402813
+    matched: true
+  - rounding_mode: min
+    op: f32_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 17277c1b1a1501784148e5038bd85706c94dbe5806455fed523578d837e06d76
+    matched: true
+  - rounding_mode: min
+    op: f64_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: e47a1df4a049d8e8e15aee35ab5745f10c5d2b185d3e0d3e88059afff47f6ca3
+    matched: true
+  - rounding_mode: min
+    op: f16_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 408
+    oracle_sha256: 72977ba85694c2c4ce1b64fc2a9efe6b1499c3772e8b9a8fb6dd91cd01c581af
+    matched: true
+  - rounding_mode: min
+    op: f16_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 408
+    oracle_sha256: 6f03064c561ac48f2cba9be9e4764b3836c5620e3d0bb72cb736a85e6ae48ea0
+    matched: true
+  - rounding_mode: min
+    op: f16_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 408
+    oracle_sha256: 153a59c3c4bf308f7bff13f1d0ea39d6fdc09ab29f5c7901ff97b0c4fa9796d6
+    matched: true
+  - rounding_mode: min
+    op: f16_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 408
+    oracle_sha256: f47ad99e6bef2a422cadef854cfb34fd7fbd96160e2709eaec045107ebc260be
+    matched: true
+  - rounding_mode: min
+    op: i32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: bdc702029d578d266405dabeb7e132003ef9312a3f16669a4a5ba8b087ca8e07
+    matched: true
+  - rounding_mode: min
+    op: ui32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 403334274a297436fa9ddf2e56d4db4d2f4acf371909e1357506968707b2f72d
+    matched: true
+  - rounding_mode: min
+    op: i64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 44fb0080137d3403b31e29e95538fb37a9f1e5d443b38dc08c5587d4eeae1ec5
+    matched: true
+  - rounding_mode: min
+    op: ui64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 6d2038d1475495ce210cc96a4d36a8db7752a8e79a8556907a68e57937bdc311
+    matched: true
+  - rounding_mode: min
+    op: f32_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 05cd79f2046588897dac1f3ec2129ed9ec96cad749c5e0801ef8fb09b41ea788
+    matched: true
+  - rounding_mode: min
+    op: f32_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: c50f58f76d89213875bc246894ac1dcbe1be84b5498931cf6fa4045870d26d4f
+    matched: true
+  - rounding_mode: min
+    op: f32_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: db0aa3d21e877fa9bbd9337077d414d5149a15ca0244172c6784d8bca29294a8
+    matched: true
+  - rounding_mode: min
+    op: f32_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: fcd1d8e6d30c8019212c5a7de04a15989b2dadefe421ce0f1f8d2ebb978f97b2
+    matched: true
+  - rounding_mode: min
+    op: f32_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 600
+    oracle_sha256: 0a996d67b93823f82b1c8e131d868a5d537aebbb5c967ff6d3ea2b42337632e9
+    matched: true
+  - rounding_mode: min
+    op: f32_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 005a3baf711c8cfbd1d8b91c20c41a51a3d6006b5388bcda1dc94a854d8cec4b
+    matched: true
+  - rounding_mode: min
+    op: f32_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 600
+    oracle_sha256: 86b3cb6683a53b9a0a8ca48256918db2d6afaf823775df57472603bf88380942
+    matched: true
+  - rounding_mode: min
+    op: f32_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 600
+    oracle_sha256: 3833090120913fe16daa4a2df09aef2e254662111a9c889e49002b6b3c793e71
+    matched: true
+  - rounding_mode: min
+    op: f32_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 219d81e41e7c82937b672cf47e63451b73ef0264f29c179b4d741ba16aaeeea8
+    matched: true
+  - rounding_mode: min
+    op: f32_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F32.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: ba122b226356304d1e575f5c7bbea765cc6cc76a107045f36a5276bc882de672
+    matched: true
+  - rounding_mode: min
+    op: f32_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 5044e606bddf08b8396f41c9567a09e1a0d280a23a5311913d5a8c12709463d7
+    matched: true
+  - rounding_mode: min
+    op: f32_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 0e6ed521892ac4ba26aa3ba3ba6f4d0f99cd1f122fda323d8aed8261dab1c6ee
+    matched: true
+  - rounding_mode: min
+    op: f32_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: ee40b3521408419412ed538ea0fadcfef6c6a88fea55bb114ac88ea5a98ed8a2
+    matched: true
+  - rounding_mode: min
+    op: f32_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 31772e8335bff4affa245ea59f42e265d892ecc7b1fb551c2ae7ee448e691c00
+    matched: true
+  - rounding_mode: min
+    op: f32_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: b7c4bf861e8c479bf915a076d727ad9eb85eb11b583321c1f3296d6b7ba187de
+    matched: true
+  - rounding_mode: min
+    op: f64_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 71e422faab4095cb5c93d46b31aed6c7316c98e41051350e49b375e1cc12392f
+    matched: true
+  - rounding_mode: min
+    op: f32_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 600
+    oracle_sha256: 38186e3b5e025a9647f14a5695c40ebeff7c1a66dc5a7f04f029af2fdf648dfc
+    matched: true
+  - rounding_mode: min
+    op: f32_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 600
+    oracle_sha256: 2c729bd3800ee989771fa01fd0d6e47d8be2628dcb85d0715b9dcbaa4ae770b6
+    matched: true
+  - rounding_mode: min
+    op: f32_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 600
+    oracle_sha256: 49efde274d2b06d4f77e1d9533986ffa5698049b052d5ed5b3b880e33c808e4a
+    matched: true
+  - rounding_mode: min
+    op: f32_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 600
+    oracle_sha256: 3789de06ed9856d95a37dc99a24492ae968adb76f7e43f308ef56f5aec6e9241
+    matched: true
+  - rounding_mode: min
+    op: i32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 9e76b84453b0585101d5acff01b8b27fd8181128e254be0bfe54102f76ff511c
+    matched: true
+  - rounding_mode: min
+    op: ui32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: cb2a6722ea8f6b87ae00a06d7e30be3eb62e871f9febc89ceb5f56dab0bf9be7
+    matched: true
+  - rounding_mode: min
+    op: i64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 8a5a3c44bee4ef5394bed6f4924a41e8bbfb7b6960625d289a83abe4a8207bd1
+    matched: true
+  - rounding_mode: min
+    op: ui64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 4077279a061a692fcd7c5944a622d54f61f113d510513bb9ebcae37bbfa866d4
+    matched: true
+  - rounding_mode: min
+    op: f64_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 23329c512f2c9fd73391f708085ac7be0f778da48f7cc5a064c3ebf060c04b76
+    matched: true
+  - rounding_mode: min
+    op: f64_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 6206e436c61afa25c59ff03b6cdf8f7bcf0d247393bf38b39cb261b44711b85f
+    matched: true
+  - rounding_mode: min
+    op: f64_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: cb174b926fa9dcdec17039a1c39c4daa59098fec0a94a971826fc8c555e1692d
+    matched: true
+  - rounding_mode: min
+    op: f64_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 980e6a41847022590d3386e3328d395b927af31dda9e0bea15ec4fa114602810
+    matched: true
+  - rounding_mode: min
+    op: f64_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 768
+    oracle_sha256: 8b78e6413934564aea80bb38f5d08375e59ef25774727bd4a0a4b4392916ed95
+    matched: true
+  - rounding_mode: min
+    op: f64_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 264056e177bd054235ace1c3a814b518fc424c0031b8a512ecb46d03ee81c533
+    matched: true
+  - rounding_mode: min
+    op: f64_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 768
+    oracle_sha256: 6ea0f31e54b3cd36cfb9c80b8f76f76f2c33c0c5b89159c1c32a170a39e13f76
+    matched: true
+  - rounding_mode: min
+    op: f64_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 768
+    oracle_sha256: a3ad011795283eeaf5b083c4b8b72a9d1a8cc1886a7e38f5c57619328161b14c
+    matched: true
+  - rounding_mode: min
+    op: f64_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 034c1b050a771cfa040253ced0b2c540205b3feffacee2cd77aa6536bd8eb2f2
+    matched: true
+  - rounding_mode: min
+    op: f64_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F64.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 75db3d79e574df8228247579b532e5f67fc83c7622a742c92ae2dc7aae37a909
+    matched: true
+  - rounding_mode: min
+    op: f64_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 83bb30ff9c09aa0818186e345d730a7264580ae340a5d18c2219d91966107eba
+    matched: true
+  - rounding_mode: min
+    op: f64_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: df9e3b8935ab2a54ac5680714772e750df6c30bb15d1c149e52a626944977bdb
+    matched: true
+  - rounding_mode: min
+    op: f64_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: c0ae8abe82964681a19c1d2a1ff377e5a874d59dc338d1a2903ea629ba46e2ef
+    matched: true
+  - rounding_mode: min
+    op: f64_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 40ce5648de629c39b2c8d23d43ce32ac9ea76fef91234583922475fbeeefd3e5
+    matched: true
+  - rounding_mode: min
+    op: f64_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 768
+    oracle_sha256: 137f55b455dcc8ea5daa8a2a3b2533889a3d8d95c2838c41a348ed6d783b975b
+    matched: true
+  - rounding_mode: min
+    op: f64_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 768
+    oracle_sha256: 801dae2cff4b87b2651a663286edfa72509417ec58cc18d101a38bf0029bd4d7
+    matched: true
+  - rounding_mode: min
+    op: f64_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 768
+    oracle_sha256: 9df9721e304f3c1f54e2f970427cdac649084ae8ffaa7fecee039c5ab1d19314
+    matched: true
+  - rounding_mode: min
+    op: f64_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 768
+    oracle_sha256: 40bf28642487449a793cb99553f9683a1ef128802dbe773b1677517d398845fd
+    matched: true
+  - rounding_mode: min
+    op: i32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 3c7a953970f1e0f3045a3fd92ef364bcd130b168de2d5a3c7288e055a1d064c6
+    matched: true
+  - rounding_mode: min
+    op: ui32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 03417b47cdeea24446593adec8aa0d8207d5d96039ace12b49d31e600d5e1e9a
+    matched: true
+  - rounding_mode: min
+    op: i64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 36953b656d7a5e704ca1356b211d529e74ec1bd482a16e854f548d6ee7e60180
+    matched: true
+  - rounding_mode: min
+    op: ui64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 0061d3f984dec04a86093a463a158ec6a29987be95b88d1083c1f901edf58219
+    matched: true
+  - rounding_mode: min
+    op: f128_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: eea3fd4f98db1d27a641aa0d36f8f213767e7a6f0377b69d31554dd68f85b3cf
+    matched: true
+  - rounding_mode: min
+    op: f128_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 253081b600acd750b0a6de63ed8806b165b919c644ec71a3ae8eb33d8b5a1e94
+    matched: true
+  - rounding_mode: min
+    op: f128_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 1b2fe5d7e17fdd5b2bc4756c2dad28776f59c0ec7d76e9ffdd33820ef8c50a65
+    matched: true
+  - rounding_mode: min
+    op: f128_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 66e5ff0dd1477022c3f0a1d2ec5d7c9d480fde75de3fb5e6d39f9e41062e5f3d
+    matched: true
+  - rounding_mode: min
+    op: f128_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 936
+    oracle_sha256: d095e0314ab98d9e88f20b332068aefd576c7866c8b98ace4ea2dfe280c02329
+    matched: true
+  - rounding_mode: min
+    op: f128_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: af6dc387d5af81d71864e8e66a7f0f0f5c388cf8d4f41feb41bee032798c082a
+    matched: true
+  - rounding_mode: min
+    op: f128_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 936
+    oracle_sha256: 919073db71d34960735ba5196ab04bd75403da0470497ed0f6cf5c82efce6c7f
+    matched: true
+  - rounding_mode: min
+    op: f128_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 936
+    oracle_sha256: 367bafa1f46ebe7d58ba90d5b58d12bed6bd8ba3c116f6d5563cf47c4c26fe60
+    matched: true
+  - rounding_mode: min
+    op: f128_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: c7e441e9f058b62a5cad48210bda0125e074e0249a225fa2e8b67ae10e9390a6
+    matched: true
+  - rounding_mode: min
+    op: f128_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F128.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17540dc9195f001fc71e8d2f2c350b23e27bcdc986361a0eb9709b094a4a988f
+    matched: true
+  - rounding_mode: min
+    op: f128_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 91c29f810dbc21c4ffc0f65146a6679fdec482d25c5162794dd25e335a43acdb
+    matched: true
+  - rounding_mode: min
+    op: f128_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: d5348156ea1ec4385823a7d3b05ec2e9d38344004dc945ad817156bf2fec7963
+    matched: true
+  - rounding_mode: min
+    op: f128_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: 5a50bd6f2489009b588646e455bfa4b4f4e968207777b9c5156d46dd08ad79bf
+    matched: true
+  - rounding_mode: min
+    op: f128_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 93415105fc9d73c4d10b3706bc03862383bdee50c1e5b4083c583e47bada7fb1
+    matched: true
+  - rounding_mode: min
+    op: f16_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: f3ed4b946061cf29cea85ce991d50669fe36efd01c1620b35d66e4dbbc7c8d74
+    matched: true
+  - rounding_mode: min
+    op: f32_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: a0c2c3e0646784ca0e082ac685f9cecb6806a1665572029af1ae4bac524b161b
+    matched: true
+  - rounding_mode: min
+    op: f64_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 5549b35ca3e5adeb829f393a2f79a0782090b04ebec5b8e251c2f8bafb50f5a4
+    matched: true
+  - rounding_mode: min
+    op: f128_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 7681627a8a67dfc46b5a6ae103c0a39b44b518d87e02e879851b1f846f9300b7
+    matched: true
+  - rounding_mode: min
+    op: f128_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 011cfca17153cbabbc3e777e5b2dce0f40c7ab0a66d9b7412a2ac58976a4350c
+    matched: true
+  - rounding_mode: min
+    op: f128_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: fbc0de1d76dd42da0284867286cabcdb6291f2f272d19ce93a666757694517bc
+    matched: true
+  - rounding_mode: min
+    op: f128_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 936
+    oracle_sha256: b7019344103cd654299397419369a00ebd138f2941373bea7d96248b89e73241
+    matched: true
+  - rounding_mode: min
+    op: f128_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 936
+    oracle_sha256: 43237fa303e5ab8315b6129b72e02a08b00fc636c97b1494cc87a2ab17b33674
+    matched: true
+  - rounding_mode: min
+    op: f128_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 936
+    oracle_sha256: 60280d6d2dedf1f22f36ca7e09967bc7db5ecb7ef3814b880fda6da6b3df2c05
+    matched: true
+  - rounding_mode: min
+    op: f128_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 936
+    oracle_sha256: 7dbf288be429a58d2d0d42ec3c09b41cfa355379fd6fda7d162f922935cd1f2b
+    matched: true
+  - rounding_mode: min
+    op: i32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 02e378795ebac3a041006bc608a35c3416ba7bcb5a56e6e36e22204cb07ee5a7
+    matched: true
+  - rounding_mode: min
+    op: ui32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 54dde39d543f36492e9f557b98442d4072cc45a3592443880a697e2e4c7008ec
+    matched: true
+  - rounding_mode: min
+    op: i64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 831da019314d4b0ad0676e159da2e3a3fbb0c29b9f59180abf4a1aec6ba84b47
+    matched: true
+  - rounding_mode: min
+    op: ui64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: f2a47c89004bfbf7a34d37f6ba95fa72a77862143f492dabf60ae6ed534e29b9
+    matched: true
+  - rounding_mode: min
+    op: f32_to_bf16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 1cc03f1f66fba57c115e9832c02db44d25423af2d785a909ca2b28179b35eb40
+    matched: true
+  - rounding_mode: min
+    op: bf16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 70989dceb6863bb481d3f5c8770c3a4a41655dac8c3968b4dcd4aecf7c964c9d
+    matched: true
+  - rounding_mode: max
+    op: f16_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 9934059cf04488e89c08083d556ca5f6988d3f94f4a79678c161d2e9bf8acd6c
+    matched: true
+  - rounding_mode: max
+    op: f16_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 250beccf57983ab1330aa1f8f79d2d33ad9cd871868bc68e529c4f929070565d
+    matched: true
+  - rounding_mode: max
+    op: f16_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 3ded943adf95cd0d62661f69a1911a53ebdc352fb0f00376c0efa7032147ea77
+    matched: true
+  - rounding_mode: max
+    op: f16_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 312851d0eb39eff1d72aafc7f5822a5e871974ec9be45f3ca1e4ec0ecbe58c04
+    matched: true
+  - rounding_mode: max
+    op: f16_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 408
+    oracle_sha256: 5e61df93c9c80cba5abfc8c4b1f7d9859272aa6f6e8a64bb4001e5ddba5c9bc1
+    matched: true
+  - rounding_mode: max
+    op: f16_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: cdc4c302e5eef995850785d818e0b2a86381d60eaae89cf8e9ceaff72b30ef73
+    matched: true
+  - rounding_mode: max
+    op: f16_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 408
+    oracle_sha256: 7b41c54ab4c69a20e181830fb8851ea6c14a38be135626a6103e37584f8faa18
+    matched: true
+  - rounding_mode: max
+    op: f16_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 408
+    oracle_sha256: c9d1b35c2dc6106f9650162be3c238f4a46d002d8db1dba9c105e39cc01e3a5f
+    matched: true
+  - rounding_mode: max
+    op: f16_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 7d167380ab65d132857e1ff07dc9369f6a351a7ed4a070d555581eef331fb92c
+    matched: true
+  - rounding_mode: max
+    op: f16_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F16.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17e66d047a04d814322939ec4802548e65022929249e37977962b6f7b1e72449
+    matched: true
+  - rounding_mode: max
+    op: f16_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 50aca9e67ced4f2ae3c78e212db1642dd3b80de88eedbc21a855c7e778ea4983
+    matched: true
+  - rounding_mode: max
+    op: f16_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 7df8f5977b897808244e0fb9a53aaa512900f60861313455d9987641f4bfe28a
+    matched: true
+  - rounding_mode: max
+    op: f16_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: f655eec589fd331b9d10c6b1a669df60ace0a8cf00561bcafc94e9dfaeb475c8
+    matched: true
+  - rounding_mode: max
+    op: f16_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 48b11f497afeaf0c64a0dcc9927b0efeba6cb45f703b122b6531e529dcce504d
+    matched: true
+  - rounding_mode: max
+    op: f16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: eb76af0e655a338c6fa4e96a7ebef138d10ff95829115cdbcf2be146f950e3e3
+    matched: true
+  - rounding_mode: max
+    op: f16_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: dffd0877df7a8219aa179b21414ed0f2066bccb78011648df00355f7c2402813
+    matched: true
+  - rounding_mode: max
+    op: f32_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: b6e4e966a21fb2a37156043d403716544301f92d7362b067bb79e382a378686f
+    matched: true
+  - rounding_mode: max
+    op: f64_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: e92d63e587b93e0efda083b955d3e0e9ee946a323f9e4da9131c69f6acedc78f
+    matched: true
+  - rounding_mode: max
+    op: f16_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 408
+    oracle_sha256: a751ff4b076a28885f049605d5e3909a661e08b81f365616585307de2c8f25f2
+    matched: true
+  - rounding_mode: max
+    op: f16_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 408
+    oracle_sha256: c289c80e8b01915832dce268903543d257e9605ea8694f321d27d021bbabff40
+    matched: true
+  - rounding_mode: max
+    op: f16_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 408
+    oracle_sha256: 6450d913e8d082dbf156ee9a71e773cd462056703d25ee662370a0aabd02eb5d
+    matched: true
+  - rounding_mode: max
+    op: f16_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 408
+    oracle_sha256: f0cd8179c8163ab140aec01a739e8df9badd7754d510dc8c526b44e7aaa131c3
+    matched: true
+  - rounding_mode: max
+    op: i32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 894d95a2f05388ebffb3e0156ad1678d6761dac4dac1c37035ee1dc330af229a
+    matched: true
+  - rounding_mode: max
+    op: ui32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: b52265d88636ec1446ba6a1dffaef32dfa3829ae03904a67b60d2b506cd01b76
+    matched: true
+  - rounding_mode: max
+    op: i64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: afe531c88fc7f790fe96a57aafab299c5e8a2a04c2f2e6943076b9edee6f34eb
+    matched: true
+  - rounding_mode: max
+    op: ui64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 7ea3ef32b564bdb55c44dec863859fb62c0058ff5b53291cbb443d47408cd8b5
+    matched: true
+  - rounding_mode: max
+    op: f32_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 6d9cac3fd9b3e5ae0b588cc8bcaaeb072b59bae8680516534aa41aff25cc675f
+    matched: true
+  - rounding_mode: max
+    op: f32_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: a75efbdb1cf34e92024f11555a2d292db5afb624ba6b8c8367cd91f52c42ea5b
+    matched: true
+  - rounding_mode: max
+    op: f32_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 71e886a2503c1e77b0b969237d30fa722850f988861328c1b3d97629ee2c2969
+    matched: true
+  - rounding_mode: max
+    op: f32_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 7134e99e9407d0ed70670b8f876cadf337ccad73eef9fad2586ef61be6b0c691
+    matched: true
+  - rounding_mode: max
+    op: f32_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 600
+    oracle_sha256: d5faad83d6c9dcb66a4b213689f2094ed4eeca959f889fd4356beeb0cfe42e44
+    matched: true
+  - rounding_mode: max
+    op: f32_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 54ba01a38c7f04572f2dd96c59059344614219af91501d067ef36ee6a7ba30b9
+    matched: true
+  - rounding_mode: max
+    op: f32_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 600
+    oracle_sha256: a2546aace3a3bdd7db1a742efb9d6f08e12d7ce94af18871435174fe75b66019
+    matched: true
+  - rounding_mode: max
+    op: f32_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 600
+    oracle_sha256: ad0cbde279e9779accc169006071b16230c5463a9287cfc13a2f2fff36a11528
+    matched: true
+  - rounding_mode: max
+    op: f32_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 219d81e41e7c82937b672cf47e63451b73ef0264f29c179b4d741ba16aaeeea8
+    matched: true
+  - rounding_mode: max
+    op: f32_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F32.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: ba122b226356304d1e575f5c7bbea765cc6cc76a107045f36a5276bc882de672
+    matched: true
+  - rounding_mode: max
+    op: f32_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 5044e606bddf08b8396f41c9567a09e1a0d280a23a5311913d5a8c12709463d7
+    matched: true
+  - rounding_mode: max
+    op: f32_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 0e6ed521892ac4ba26aa3ba3ba6f4d0f99cd1f122fda323d8aed8261dab1c6ee
+    matched: true
+  - rounding_mode: max
+    op: f32_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: ee40b3521408419412ed538ea0fadcfef6c6a88fea55bb114ac88ea5a98ed8a2
+    matched: true
+  - rounding_mode: max
+    op: f32_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 31772e8335bff4affa245ea59f42e265d892ecc7b1fb551c2ae7ee448e691c00
+    matched: true
+  - rounding_mode: max
+    op: f32_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: b7c4bf861e8c479bf915a076d727ad9eb85eb11b583321c1f3296d6b7ba187de
+    matched: true
+  - rounding_mode: max
+    op: f64_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 584fa081e065bd40da86f4a29c9ad64859ff9752d18248a995855b294e1ca2ac
+    matched: true
+  - rounding_mode: max
+    op: f32_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 600
+    oracle_sha256: 07b15bc5d61d73b19cd5d4727d22f6d8b6fd4cc3ae112d6c839b675fb5d3f5dc
+    matched: true
+  - rounding_mode: max
+    op: f32_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 600
+    oracle_sha256: 1cc2df2ab9dc9f0583a5b89ae07396b31fa7e61e31635b62577dc7996ea339b8
+    matched: true
+  - rounding_mode: max
+    op: f32_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 600
+    oracle_sha256: 15b93c812287af8ec7241e42428632bb5a3b70ea2a87103d1f0921ceb4ecceaf
+    matched: true
+  - rounding_mode: max
+    op: f32_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 600
+    oracle_sha256: dae45e2896420bf0a7a48f50fb53fcc7e4b1c40e504249225cc9d1b283ce8997
+    matched: true
+  - rounding_mode: max
+    op: i32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 4864c50235a9570ec54c6985a8a5ddf2c73e3f87de99040dfc84395a4415e1dd
+    matched: true
+  - rounding_mode: max
+    op: ui32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 480b791a02cdb6b88d2b6c92a41865361474c3bebfc0b74f2fb5968ea3f8eb05
+    matched: true
+  - rounding_mode: max
+    op: i64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: c3be8c16761d1fb1c2fb30ba97c719a3818a71d713d6f51286aba913909d8ab9
+    matched: true
+  - rounding_mode: max
+    op: ui64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: de83a2258578f823f14be8f1358c4363858974409261862b0a35ba7048012dc2
+    matched: true
+  - rounding_mode: max
+    op: f64_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: da8df44cf65900b56e11829969f0ca1c174566391baea821df5754ecd5e99433
+    matched: true
+  - rounding_mode: max
+    op: f64_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 1ed899f2457b4b8a9417357c8e575bfbb91002d37c875f8d5452cf8725a9e4ab
+    matched: true
+  - rounding_mode: max
+    op: f64_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 5e6f4408f947f408b1c5ab3c83ba3bab4fe161aec6460c2e5b7c5945bbf49e79
+    matched: true
+  - rounding_mode: max
+    op: f64_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: dc3eac6c8b281142c881ac8ca12bcf318e8a3426366cea68f2bf705b858d5600
+    matched: true
+  - rounding_mode: max
+    op: f64_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 768
+    oracle_sha256: af3cdcd3b745bb6cc9eb439110c110cb4d26145548516decdd06174e1badaa1b
+    matched: true
+  - rounding_mode: max
+    op: f64_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: d13a8bbedbdbd0472ed24da4be22c46983cc168714474f4a81d928e3d3912194
+    matched: true
+  - rounding_mode: max
+    op: f64_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 768
+    oracle_sha256: bd36a9533bdd9cd5f852f2db1db6c4edc7e4268e0f54045c9bc1e65e7d356dc3
+    matched: true
+  - rounding_mode: max
+    op: f64_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 768
+    oracle_sha256: 84cd357ccd725979b073c7f345b15f8fe415657d6fea2206481521d92fa0f092
+    matched: true
+  - rounding_mode: max
+    op: f64_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 034c1b050a771cfa040253ced0b2c540205b3feffacee2cd77aa6536bd8eb2f2
+    matched: true
+  - rounding_mode: max
+    op: f64_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F64.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 75db3d79e574df8228247579b532e5f67fc83c7622a742c92ae2dc7aae37a909
+    matched: true
+  - rounding_mode: max
+    op: f64_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 83bb30ff9c09aa0818186e345d730a7264580ae340a5d18c2219d91966107eba
+    matched: true
+  - rounding_mode: max
+    op: f64_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: df9e3b8935ab2a54ac5680714772e750df6c30bb15d1c149e52a626944977bdb
+    matched: true
+  - rounding_mode: max
+    op: f64_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: c0ae8abe82964681a19c1d2a1ff377e5a874d59dc338d1a2903ea629ba46e2ef
+    matched: true
+  - rounding_mode: max
+    op: f64_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 40ce5648de629c39b2c8d23d43ce32ac9ea76fef91234583922475fbeeefd3e5
+    matched: true
+  - rounding_mode: max
+    op: f64_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 768
+    oracle_sha256: 3f83fc8ce9aeba1722016a6d44359f453fdc107f6612d471b2ea91c24cc2bd60
+    matched: true
+  - rounding_mode: max
+    op: f64_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 768
+    oracle_sha256: 2df062af0f6e90109b35961c38ae6f1b6645dfcfa071312efc905d394963049c
+    matched: true
+  - rounding_mode: max
+    op: f64_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 768
+    oracle_sha256: 731337960f97782553a0d92d3d994367cda5cf6b5b28c6c39c08b84ff6fd9e96
+    matched: true
+  - rounding_mode: max
+    op: f64_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 768
+    oracle_sha256: 48b4ba6c1084d77061eda9acd9c8872d6fa8f73499b89363754ccb389950b6fe
+    matched: true
+  - rounding_mode: max
+    op: i32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 3c7a953970f1e0f3045a3fd92ef364bcd130b168de2d5a3c7288e055a1d064c6
+    matched: true
+  - rounding_mode: max
+    op: ui32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 03417b47cdeea24446593adec8aa0d8207d5d96039ace12b49d31e600d5e1e9a
+    matched: true
+  - rounding_mode: max
+    op: i64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: c013dfa4135e34994e3b2442e6a23cd2b0fffad0e587b6d78f8295494970effa
+    matched: true
+  - rounding_mode: max
+    op: ui64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 272cf845005ee6a04b39506567406b8e9b3499569ecb8ee634e46dd198e59b53
+    matched: true
+  - rounding_mode: max
+    op: f128_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 60575616f502d96e2e63c5c7aecc617cb64ae1f0fe6163864623f0d39563d356
+    matched: true
+  - rounding_mode: max
+    op: f128_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: de022afbb514905719454038d401e54a697cc14eb54abacf355b46513d39baf5
+    matched: true
+  - rounding_mode: max
+    op: f128_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 356f7faebe7b0d943316ff8d6e46c0d5d48b81f2620650c7e31d4adabb76b661
+    matched: true
+  - rounding_mode: max
+    op: f128_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 29c2f6618ae4273b5cee47beaa6b2cfb7fdea494bf3994ca690394ee1fc98068
+    matched: true
+  - rounding_mode: max
+    op: f128_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 936
+    oracle_sha256: 96740aa7359d0fe8ce7cb530f2483eb831dce54cf35545264ce651dad4392c12
+    matched: true
+  - rounding_mode: max
+    op: f128_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: ebc22b2433d7c9c4e58597e28839c760285fe3b03f0d8a9f86304cbf14d5a0f2
+    matched: true
+  - rounding_mode: max
+    op: f128_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 936
+    oracle_sha256: 4f2e3a03e51847b465fb3f82610f73bc4912259a8ddb0a96bf6cb357db4ee036
+    matched: true
+  - rounding_mode: max
+    op: f128_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 936
+    oracle_sha256: 276392ba2e75d48da3ece63a54aae546a90cf5c718a1ff3c3392f764e234e97e
+    matched: true
+  - rounding_mode: max
+    op: f128_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: c7e441e9f058b62a5cad48210bda0125e074e0249a225fa2e8b67ae10e9390a6
+    matched: true
+  - rounding_mode: max
+    op: f128_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F128.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17540dc9195f001fc71e8d2f2c350b23e27bcdc986361a0eb9709b094a4a988f
+    matched: true
+  - rounding_mode: max
+    op: f128_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 91c29f810dbc21c4ffc0f65146a6679fdec482d25c5162794dd25e335a43acdb
+    matched: true
+  - rounding_mode: max
+    op: f128_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: d5348156ea1ec4385823a7d3b05ec2e9d38344004dc945ad817156bf2fec7963
+    matched: true
+  - rounding_mode: max
+    op: f128_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: 5a50bd6f2489009b588646e455bfa4b4f4e968207777b9c5156d46dd08ad79bf
+    matched: true
+  - rounding_mode: max
+    op: f128_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 93415105fc9d73c4d10b3706bc03862383bdee50c1e5b4083c583e47bada7fb1
+    matched: true
+  - rounding_mode: max
+    op: f16_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: f3ed4b946061cf29cea85ce991d50669fe36efd01c1620b35d66e4dbbc7c8d74
+    matched: true
+  - rounding_mode: max
+    op: f32_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: a0c2c3e0646784ca0e082ac685f9cecb6806a1665572029af1ae4bac524b161b
+    matched: true
+  - rounding_mode: max
+    op: f64_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 5549b35ca3e5adeb829f393a2f79a0782090b04ebec5b8e251c2f8bafb50f5a4
+    matched: true
+  - rounding_mode: max
+    op: f128_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: b00adf154987f48ce9e0fb761b3ec1abcae7d0a3ff23c06a937024992039914d
+    matched: true
+  - rounding_mode: max
+    op: f128_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 1ca7e8f038683c677f003f730168d1faab9efad8e5b306da808a045fdb211104
+    matched: true
+  - rounding_mode: max
+    op: f128_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 7df6d3ef91dde6af771657d807a0b498a145f2d1c61e2f51b9e3fe9566a395b7
+    matched: true
+  - rounding_mode: max
+    op: f128_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 936
+    oracle_sha256: 0094d59d5ef78ada486a57d5a1ab0bffc0650ba52b52137563fef12d4638676b
+    matched: true
+  - rounding_mode: max
+    op: f128_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 936
+    oracle_sha256: e1d1b612e2d724e3c44c60ea0a8ddba8a08aa37a6637d34092da435b865d53c9
+    matched: true
+  - rounding_mode: max
+    op: f128_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 936
+    oracle_sha256: e95235915457581f38fcbcb3e4ca4914963ffaeaad75828082d328af471a8786
+    matched: true
+  - rounding_mode: max
+    op: f128_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 936
+    oracle_sha256: 9d6f800b3e3640b9aed1b96d29dbf12fe8693a3299f910180365553150c66fd5
+    matched: true
+  - rounding_mode: max
+    op: i32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 02e378795ebac3a041006bc608a35c3416ba7bcb5a56e6e36e22204cb07ee5a7
+    matched: true
+  - rounding_mode: max
+    op: ui32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 54dde39d543f36492e9f557b98442d4072cc45a3592443880a697e2e4c7008ec
+    matched: true
+  - rounding_mode: max
+    op: i64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 831da019314d4b0ad0676e159da2e3a3fbb0c29b9f59180abf4a1aec6ba84b47
+    matched: true
+  - rounding_mode: max
+    op: ui64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: f2a47c89004bfbf7a34d37f6ba95fa72a77862143f492dabf60ae6ed534e29b9
+    matched: true
+  - rounding_mode: max
+    op: f32_to_bf16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: fe768a634129e69827418a9d5ae17b00061008202c2cee984c9740042fa2077a
+    matched: true
+  - rounding_mode: max
+    op: bf16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 70989dceb6863bb481d3f5c8770c3a4a41655dac8c3968b4dcd4aecf7c964c9d
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: 645a4dd53e5964eb722c25ec2d263c0d7cbf48910700225a7d3dc1d51446a3c3
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: bb382eb0074f70f6f51c9a46492b617ae5e56cadc0f3fd690c3637f1f5809f73
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: f0f1f84ce998d852fb46a9e41855abca9c802b332b34d637928abfed540699bf
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 08fa0409a99cdd8149fb531a1310a4d01886aabe893521eaedeffdad4d0707ca
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 408
+    oracle_sha256: dfffab309353dd48497e616cfd418bf9d4de4ff5a86943b4b25e2abdd6d75343
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 9c5b728e559c5ea993ea938b58d4657249c04bb4c5a832d65fc4eeb7d013250c
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 408
+    oracle_sha256: ee25c9b80e514a5848e7fd20ba5ab83a8efb1654046e4b2d128282ecfc86362b
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 408
+    oracle_sha256: f3bdd883b18106fc6a86d95dea6343ebd9178c308d05d0eaa9c07bc5defdeba3
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 7d167380ab65d132857e1ff07dc9369f6a351a7ed4a070d555581eef331fb92c
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F16.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17e66d047a04d814322939ec4802548e65022929249e37977962b6f7b1e72449
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 50aca9e67ced4f2ae3c78e212db1642dd3b80de88eedbc21a855c7e778ea4983
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 7df8f5977b897808244e0fb9a53aaa512900f60861313455d9987641f4bfe28a
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: f655eec589fd331b9d10c6b1a669df60ace0a8cf00561bcafc94e9dfaeb475c8
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 48b11f497afeaf0c64a0dcc9927b0efeba6cb45f703b122b6531e529dcce504d
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: eb76af0e655a338c6fa4e96a7ebef138d10ff95829115cdbcf2be146f950e3e3
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: dffd0877df7a8219aa179b21414ed0f2066bccb78011648df00355f7c2402813
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 44cd8226801b0a68328eb181cb5d09773740a984d75b86193e571a169b9810c4
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 614b579a4cfb6f6e035742d467809b40793daaca828940d93cb4c6ecb566d0b7
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 408
+    oracle_sha256: a242b1905b901b5595103153b0410f3acc9e64e07003ffa50ce894420b2ff91c
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 408
+    oracle_sha256: 766b86cfbc0814506513399a8aacc9ca22cfa132595bbba6936b2e55a204cbca
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 408
+    oracle_sha256: 277a28cbeac4614733df085c3c40885b637be48f8d5f248eeff9115d80b5b0da
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 408
+    oracle_sha256: 15a925dd08b2abbc02177ee5959e3c6f082bbc91cfad3a687a247e0dfd96bc45
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: bf81e4e369b6570b52a080b280d03cbcb014bbb5c4c22eb5a8d067ea1aa9105c
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui32_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 498981e1991bcf199656194601b1fd4f3c5498e42e5a9143320cd636b29238ce
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: a74ab8f24047e7149e94bbd62bc12313404f9bc7b722474ee286277902273c68
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui64_to_f16
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 4f2edb05814935e64b7b1adb7186e62608a4830b35b748c826b3a54f8b24f672
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: cb3400c553a438e7a0409133ca0af0f4603a16e58584a9b138ad40a68da16f0f
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: f6fe7c3c1839b7e69e8eac30fe75651a0168ff1991d69a64847f5be1e26b3ae8
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 62146d3b2f91ea07ef11c573fefa537e6be339ac2f32a877fea771dbb61f0cd2
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: eb371b00b1de57a72a88c7f833c86e53c34b0da55d37d297498ff874e49051c9
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 600
+    oracle_sha256: 31b1202668dad6f0710968f5798e9421e18ee1d317f6c616b20f12b43e5c27eb
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 124f6ca191fef5ed24646ae77f9964c9ecaae303413c0e0abc22dfe230be5166
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 600
+    oracle_sha256: 1e6ae0be49968da524ea3144eb3d77047f7cd66debb69ac98f807414774e44da
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 600
+    oracle_sha256: f5b79f791de6ef28b55b1cbf15b983e12e5fec40239297126d8d9f6e3dce2e3e
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 219d81e41e7c82937b672cf47e63451b73ef0264f29c179b4d741ba16aaeeea8
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F32.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: ba122b226356304d1e575f5c7bbea765cc6cc76a107045f36a5276bc882de672
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 5044e606bddf08b8396f41c9567a09e1a0d280a23a5311913d5a8c12709463d7
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 0e6ed521892ac4ba26aa3ba3ba6f4d0f99cd1f122fda323d8aed8261dab1c6ee
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: ee40b3521408419412ed538ea0fadcfef6c6a88fea55bb114ac88ea5a98ed8a2
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 31772e8335bff4affa245ea59f42e265d892ecc7b1fb551c2ae7ee448e691c00
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: b7c4bf861e8c479bf915a076d727ad9eb85eb11b583321c1f3296d6b7ba187de
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: ee963f3b04d5a10954c98e0ef5195293443019285785f46b1366674cd0b84623
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 600
+    oracle_sha256: 7d3b67c186e5f104a8124ef686623272cd9c8d637068ce4de5503a9871d073d8
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 600
+    oracle_sha256: bbae21a9a39b95971e2b754c33cdbe2742d4c28a7fd65c32440a75665efc9309
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 600
+    oracle_sha256: 52804e8fd4a211a918c4c3ad587adfa9a8ec239fdcafb99b7fd69ff09dd975bd
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 600
+    oracle_sha256: da28b606ee4c666141158a3aa056a00653d353b094e3734a6d72575948fc6de0
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: d14c0ba624c42dfdd30ea4e014d59e66b3d5bb38121fde3b018bcaef863077d6
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui32_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: d7b9d3969b9e6598eb56187671bb059fe0b04959a6c9785c674bfe2017d9fd6b
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 55a6a9311738e9329c5aac6063d57752026a68b2505aa50fc51f7210b36b8450
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui64_to_f32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 4a90a02047b40afddef95fd5f2b50f6511f53fa47e177d7f5bcae7bc8196968b
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: cd3976f942c25a64749e291a2d338f7b8e2637ad8dbd2b25d2d85eb45d381b7f
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: fc90ab6094c1fd82e57c3e42ed075aed14920d146e632a05c780f30b4c61493c
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 3eabde8ee62270b97225c56f4c6952c1ca76c936515bc7347925ca818abe5d42
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: cc1cf8347efae002f2bda95ecdc12e779ef23171f99a70d0ddbdbaec1424125a
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 768
+    oracle_sha256: 74c9077bf421a4a98b59661633dcd5da94799c8d4f871d304479f24da6ecef45
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 09c601abbd945da5c0d2101d617deff9c6d0215f4ac38af53a5c3cd1d717501d
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 768
+    oracle_sha256: 44e1216edf624075988c1e3c03a082810e94b8c4b485f9801ee7d8d5f4732214
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 768
+    oracle_sha256: c22194e6a17327477d39c16fd430254b753f565b33107f78f920878f9d75d438
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 034c1b050a771cfa040253ced0b2c540205b3feffacee2cd77aa6536bd8eb2f2
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F64.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 75db3d79e574df8228247579b532e5f67fc83c7622a742c92ae2dc7aae37a909
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 83bb30ff9c09aa0818186e345d730a7264580ae340a5d18c2219d91966107eba
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: df9e3b8935ab2a54ac5680714772e750df6c30bb15d1c149e52a626944977bdb
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: c0ae8abe82964681a19c1d2a1ff377e5a874d59dc338d1a2903ea629ba46e2ef
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 40ce5648de629c39b2c8d23d43ce32ac9ea76fef91234583922475fbeeefd3e5
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 768
+    oracle_sha256: 3702420e4049e1834d8075da939c46661d0d1ce2d925a1d2f257b804d574065e
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 768
+    oracle_sha256: 6ab4eeaffdeea358c90ab3d18375975e3bf8a5bc87994945f10f8fe8df41121e
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 768
+    oracle_sha256: 020407edcfb7418348b95b970e0843d9c1076d9adf4962288e1b8f607a927850
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 768
+    oracle_sha256: 477beed5a5e93404f3c9a34c077c39e3b55e32e268a6d53a69217f1107b309dc
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 3c7a953970f1e0f3045a3fd92ef364bcd130b168de2d5a3c7288e055a1d064c6
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui32_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 03417b47cdeea24446593adec8aa0d8207d5d96039ace12b49d31e600d5e1e9a
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 85b7755161371e45b0cb0d3e7bcb5bb7fa88f720cdb6bf0f8b59a3645a585eda
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui64_to_f64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: 88a513518ca802de873132b28166b1e0b1089d75d4c76fc0bcded5d7d24b683d
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_add
+    decl: SoftFloat.RISCV.riscv.instructions.FADD
+    vectors: 46464
+    oracle_sha256: bf1613d19e37a32e22f2233a9158237b8a253fe96edde30d104a1c2ca4505bb0
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_sub
+    decl: SoftFloat.RISCV.riscv.instructions.FSUB
+    vectors: 46464
+    oracle_sha256: 86a6d6b1096c78b19f3c3b810159a347b519ae1dd9361ed09f00ecb7f6913faa
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_mul
+    decl: SoftFloat.RISCV.riscv.instructions.FMUL
+    vectors: 46464
+    oracle_sha256: 999bd31870e1c552817f9b006ad8549f5c82ef8b26e8626991e7ccfe61d88f13
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_div
+    decl: SoftFloat.RISCV.riscv.instructions.FDIV
+    vectors: 46464
+    oracle_sha256: 43002c3ef34e93cfb7f4b0ea18f6fbd2f91d61b491b1aeda98bc316fbe2b0687
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_sqrt
+    decl: SoftFloat.RISCV.riscv.instructions.FSQRT
+    vectors: 936
+    oracle_sha256: 6c631dd61847c114c78edee0498e9189b950acb67c3a3155c43e31597e73e1d6
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_mulAdd
+    decl: SoftFloat.RISCV.riscv.instructions.FMADD
+    vectors: 6133248
+    oracle_sha256: 97b43cf87e8ca01095aad09f34fd7f07dd372e16290fad2cdaccbe91ba146bc0
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_roundToInt
+    decl: SoftFloat.RISCV.riscv.instructions.FROUNDNX
+    vectors: 936
+    oracle_sha256: 556fe270d6f2a0876eb5a48f82338f6b299396e65a68b93ef69e908b62c3b56d
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.instructions.FROUND
+    vectors: 936
+    oracle_sha256: 5c02268379d98549e63bae73af348dbaa564ddfb127bd73b1d4b531b9d755fa6
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: c7e441e9f058b62a5cad48210bda0125e074e0249a225fa2e8b67ae10e9390a6
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F128.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17540dc9195f001fc71e8d2f2c350b23e27bcdc986361a0eb9709b094a4a988f
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 91c29f810dbc21c4ffc0f65146a6679fdec482d25c5162794dd25e335a43acdb
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: d5348156ea1ec4385823a7d3b05ec2e9d38344004dc945ad817156bf2fec7963
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: 5a50bd6f2489009b588646e455bfa4b4f4e968207777b9c5156d46dd08ad79bf
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 93415105fc9d73c4d10b3706bc03862383bdee50c1e5b4083c583e47bada7fb1
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f16_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 408
+    oracle_sha256: f3ed4b946061cf29cea85ce991d50669fe36efd01c1620b35d66e4dbbc7c8d74
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: a0c2c3e0646784ca0e082ac685f9cecb6806a1665572029af1ae4bac524b161b
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f64_to_f128
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 768
+    oracle_sha256: 5549b35ca3e5adeb829f393a2f79a0782090b04ebec5b8e251c2f8bafb50f5a4
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_to_f16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 1bdbdd2698bc0fe04565eaabee4497286aea2cdf21873fe9f121b9ef324160bf
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: c1dec7515d8bb8467ce3b80b04211947ae64c862d473bff0e5154e28c776b249
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_to_f64
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 936
+    oracle_sha256: 33f71eced161164639a09a89b562f03e4cecd431e8e5976c24222a0645bbc76f
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_to_i32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_W_F
+    vectors: 936
+    oracle_sha256: 421639426bc5d5d2cc8c55d75d05520aad49e03a7756f9dcd3fd75e6e93acdfa
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_to_ui32
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_WU_F
+    vectors: 936
+    oracle_sha256: c232e04600a600bc6ae16e55c7bcb6f1d1baba213b22e7362faea29185bcdd7b
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_to_i64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_L_F
+    vectors: 936
+    oracle_sha256: 7ae91dcef8ae71d42ca29a7d538ccc577c19404d28d7825f1c5a9b9043ca78f2
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f128_to_ui64
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_LU_F
+    vectors: 936
+    oracle_sha256: 7ed59078aa2bc0f0201072f5334694229417a4f2ca55c3dcbb86ba48be96bef1
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_W
+    vectors: 372
+    oracle_sha256: 02e378795ebac3a041006bc608a35c3416ba7bcb5a56e6e36e22204cb07ee5a7
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui32_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_WU
+    vectors: 372
+    oracle_sha256: 54dde39d543f36492e9f557b98442d4072cc45a3592443880a697e2e4c7008ec
+    matched: true
+  - rounding_mode: near_maxMag
+    op: i64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_L
+    vectors: 756
+    oracle_sha256: 831da019314d4b0ad0676e159da2e3a3fbb0c29b9f59180abf4a1aec6ba84b47
+    matched: true
+  - rounding_mode: near_maxMag
+    op: ui64_to_f128
+    decl: SoftFloat.RISCV.riscv.instructions.FCVT_F_LU
+    vectors: 756
+    oracle_sha256: f2a47c89004bfbf7a34d37f6ba95fa72a77862143f492dabf60ae6ed534e29b9
+    matched: true
+  - rounding_mode: near_maxMag
+    op: f32_to_bf16
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: cdeeb887ff2419dbab45fd7ebfd7159901d520474a81cf4eb067903ce85f87b4
+    matched: true
+  - rounding_mode: near_maxMag
+    op: bf16_to_f32
+    decl: SoftFloat.RISCV.riscv.conversions.FCVT
+    vectors: 600
+    oracle_sha256: 70989dceb6863bb481d3f5c8770c3a4a41655dac8c3968b4dcd4aecf7c964c9d
+    matched: true
+  - rounding_mode: odd
+    op: f16_add
+    decl: SoftFloat.RISCV.riscv.F16.addition
+    vectors: 46464
+    oracle_sha256: 1451fd095f4a79cfee0e9404aa5a0cb36f8a5bab7c534a6ea6739048234612e1
+    matched: true
+  - rounding_mode: odd
+    op: f16_sub
+    decl: SoftFloat.RISCV.riscv.F16.subtraction
+    vectors: 46464
+    oracle_sha256: c4130e68b269fed6cd4a7d260a52f0afb9c0115913f6fbca2deea26dcde98962
+    matched: true
+  - rounding_mode: odd
+    op: f16_mul
+    decl: SoftFloat.RISCV.riscv.F16.multiplication
+    vectors: 46464
+    oracle_sha256: 813275908cf8c7e6c777312f86ebb20bde8f0288a2249fa24a1cfce3aa85b2c3
+    matched: true
+  - rounding_mode: odd
+    op: f16_div
+    decl: SoftFloat.RISCV.riscv.F16.division
+    vectors: 46464
+    oracle_sha256: 586ca302b5ca6dad11b2bf94071fc2e4c014eb05d5ad7129706335faed0a9e61
+    matched: true
+  - rounding_mode: odd
+    op: f16_sqrt
+    decl: SoftFloat.RISCV.riscv.F16.squareRoot
+    vectors: 408
+    oracle_sha256: 0ecc34489747b7b9a999e20c035a0575a8640ce663a7d210ff77f4a67936e22d
+    matched: true
+  - rounding_mode: odd
+    op: f16_mulAdd
+    decl: SoftFloat.RISCV.riscv.F16.fusedMultiplyAdd
+    vectors: 6133248
+    oracle_sha256: 04f365861318e2362edac570b6b23799d0e4158dc96b48bc1e64fe0ca511a757
+    matched: true
+  - rounding_mode: odd
+    op: f16_roundToInt
+    decl: SoftFloat.RISCV.riscv.F16.roundToIntegral
+    vectors: 408
+    oracle_sha256: 23835b6bc5819a344204a9e13bbca3d8459668f5270017c33f2b2ca7b290f665
+    matched: true
+  - rounding_mode: odd
+    op: f16_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.F16.roundToIntegral
+    vectors: 408
+    oracle_sha256: 0da24c4dbe02027469202af25f1067cc64cb03de1079c75fa872adf1eace8c05
+    matched: true
+  - rounding_mode: odd
+    op: f16_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 7d167380ab65d132857e1ff07dc9369f6a351a7ed4a070d555581eef331fb92c
+    matched: true
+  - rounding_mode: odd
+    op: f16_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F16.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17e66d047a04d814322939ec4802548e65022929249e37977962b6f7b1e72449
+    matched: true
+  - rounding_mode: odd
+    op: f16_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 50aca9e67ced4f2ae3c78e212db1642dd3b80de88eedbc21a855c7e778ea4983
+    matched: true
+  - rounding_mode: odd
+    op: f16_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 7df8f5977b897808244e0fb9a53aaa512900f60861313455d9987641f4bfe28a
+    matched: true
+  - rounding_mode: odd
+    op: f16_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: f655eec589fd331b9d10c6b1a669df60ace0a8cf00561bcafc94e9dfaeb475c8
+    matched: true
+  - rounding_mode: odd
+    op: f16_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 48b11f497afeaf0c64a0dcc9927b0efeba6cb45f703b122b6531e529dcce504d
+    matched: true
+  - rounding_mode: odd
+    op: f16_to_f32
+    decl: SoftFloat.RISCV.riscv.F16.convertFormat
+    vectors: 408
+    oracle_sha256: eb76af0e655a338c6fa4e96a7ebef138d10ff95829115cdbcf2be146f950e3e3
+    matched: true
+  - rounding_mode: odd
+    op: f16_to_f64
+    decl: SoftFloat.RISCV.riscv.F16.convertFormat
+    vectors: 408
+    oracle_sha256: dffd0877df7a8219aa179b21414ed0f2066bccb78011648df00355f7c2402813
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_f16
+    decl: SoftFloat.RISCV.riscv.widenings.VFNCVT_ROD_F_F_W
+    vectors: 600
+    oracle_sha256: 740d92a8a2fb176cf0b1ba443430f5c5730d578d993c3d04471b2308373fdb9e
+    matched: true
+  - rounding_mode: odd
+    op: f64_to_f16
+    decl: SoftFloat.RISCV.riscv.F64.convertFormat
+    vectors: 768
+    oracle_sha256: 756bf4db2fb6931260bd54da040921223dc8c8e30b8f4afed0b31336d6b43498
+    matched: true
+  - rounding_mode: odd
+    op: f16_to_i32
+    decl: SoftFloat.RISCV.riscv.F16.convertToInteger
+    vectors: 408
+    oracle_sha256: 8bc2245e66bd329a43ddcdbdf70cb9731a7590b51c0a2800298bf1c081055322
+    matched: true
+  - rounding_mode: odd
+    op: f16_to_ui32
+    decl: SoftFloat.RISCV.riscv.F16.convertToInteger
+    vectors: 408
+    oracle_sha256: e6a76824c314e5bd74a898bfc6efb20b658a10c20959711c0ab51360407cf485
+    matched: true
+  - rounding_mode: odd
+    op: f16_to_i64
+    decl: SoftFloat.RISCV.riscv.F16.convertToInteger
+    vectors: 408
+    oracle_sha256: 1a18c031f1c33aecf71fe4426275ea3c5ab427ea293ca511cc8c077a55803c45
+    matched: true
+  - rounding_mode: odd
+    op: f16_to_ui64
+    decl: SoftFloat.RISCV.riscv.F16.convertToInteger
+    vectors: 408
+    oracle_sha256: bfdf352acdb751c8c7efff325d4512f49ae2f760d6d97d1485c41955f3f69b72
+    matched: true
+  - rounding_mode: odd
+    op: i32_to_f16
+    decl: SoftFloat.RISCV.riscv.F16.convertFromInt
+    vectors: 372
+    oracle_sha256: 8375f232eeb5a1ed2e453388a8797d934d39fcabb13b7641e7d30affd9825996
+    matched: true
+  - rounding_mode: odd
+    op: ui32_to_f16
+    decl: SoftFloat.RISCV.riscv.F16.convertFromInt
+    vectors: 372
+    oracle_sha256: 1dab7a8448e9e526a4abad03185ef97acdb589ca85dd80b9c0c60f310ddc1066
+    matched: true
+  - rounding_mode: odd
+    op: i64_to_f16
+    decl: SoftFloat.RISCV.riscv.F16.convertFromInt
+    vectors: 756
+    oracle_sha256: f3954bea6c0c2b84baf37501ee38efcbecb65dc4796732f5fd33179397515127
+    matched: true
+  - rounding_mode: odd
+    op: ui64_to_f16
+    decl: SoftFloat.RISCV.riscv.F16.convertFromInt
+    vectors: 756
+    oracle_sha256: 65568728c962d0320c87cae14e02ced12e857e0dfa10a4d3285c0ea7a6bff81b
+    matched: true
+  - rounding_mode: odd
+    op: f32_add
+    decl: SoftFloat.RISCV.riscv.F32.addition
+    vectors: 46464
+    oracle_sha256: 3d707408641efdfa0015e69d2cebdc99c81129eb99293c1a58e485e783ec5e8c
+    matched: true
+  - rounding_mode: odd
+    op: f32_sub
+    decl: SoftFloat.RISCV.riscv.F32.subtraction
+    vectors: 46464
+    oracle_sha256: 969c404d77af1f19df483fddd11c1950166b5b9cda1a9b618f0a11cb46f66d26
+    matched: true
+  - rounding_mode: odd
+    op: f32_mul
+    decl: SoftFloat.RISCV.riscv.F32.multiplication
+    vectors: 46464
+    oracle_sha256: 02053a63456cbb857be54980e90ac851414fe2192d7e6782416f6743f6064b55
+    matched: true
+  - rounding_mode: odd
+    op: f32_div
+    decl: SoftFloat.RISCV.riscv.F32.division
+    vectors: 46464
+    oracle_sha256: 6a5946dfc87bf87828a04eedfe2e1f043d28f2e7dbb0fdd76044a9a59ebbad98
+    matched: true
+  - rounding_mode: odd
+    op: f32_sqrt
+    decl: SoftFloat.RISCV.riscv.F32.squareRoot
+    vectors: 600
+    oracle_sha256: 9b2a16f28a84c9aef282b6fcf4c206f1f7cda7a07db612e4578b88b49c98792b
+    matched: true
+  - rounding_mode: odd
+    op: f32_mulAdd
+    decl: SoftFloat.RISCV.riscv.F32.fusedMultiplyAdd
+    vectors: 6133248
+    oracle_sha256: 943c19c9ebc98ffdddb8143bd4693910efc10a707c786cc6459bc4c6f82b1297
+    matched: true
+  - rounding_mode: odd
+    op: f32_roundToInt
+    decl: SoftFloat.RISCV.riscv.F32.roundToIntegral
+    vectors: 600
+    oracle_sha256: 2d5ba5931646a73fcccb8c5aabe7720ca604ba4aa7873b7ad67af0b307738d94
+    matched: true
+  - rounding_mode: odd
+    op: f32_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.F32.roundToIntegral
+    vectors: 600
+    oracle_sha256: 7b61ccd5d8bfc063c79712d40d4838e6afe299705c633f05d4fccac72b45bbb8
+    matched: true
+  - rounding_mode: odd
+    op: f32_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 219d81e41e7c82937b672cf47e63451b73ef0264f29c179b4d741ba16aaeeea8
+    matched: true
+  - rounding_mode: odd
+    op: f32_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F32.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: ba122b226356304d1e575f5c7bbea765cc6cc76a107045f36a5276bc882de672
+    matched: true
+  - rounding_mode: odd
+    op: f32_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 5044e606bddf08b8396f41c9567a09e1a0d280a23a5311913d5a8c12709463d7
+    matched: true
+  - rounding_mode: odd
+    op: f32_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: 0e6ed521892ac4ba26aa3ba3ba6f4d0f99cd1f122fda323d8aed8261dab1c6ee
+    matched: true
+  - rounding_mode: odd
+    op: f32_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: ee40b3521408419412ed538ea0fadcfef6c6a88fea55bb114ac88ea5a98ed8a2
+    matched: true
+  - rounding_mode: odd
+    op: f32_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 31772e8335bff4affa245ea59f42e265d892ecc7b1fb551c2ae7ee448e691c00
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_f64
+    decl: SoftFloat.RISCV.riscv.F32.convertFormat
+    vectors: 600
+    oracle_sha256: b7c4bf861e8c479bf915a076d727ad9eb85eb11b583321c1f3296d6b7ba187de
+    matched: true
+  - rounding_mode: odd
+    op: f64_to_f32
+    decl: SoftFloat.RISCV.riscv.widenings.VFNCVT_ROD_F_F_W
+    vectors: 768
+    oracle_sha256: ba477e7b311e99cbcb4778f330da5febc22a3ad45ae870bf7b04ce757f48e6b8
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_i32
+    decl: SoftFloat.RISCV.riscv.F32.convertToInteger
+    vectors: 600
+    oracle_sha256: f1f82881b65bc6d201c5419fe013ee65fbe4fd2e8f73ad2aa01b77be26a31839
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_ui32
+    decl: SoftFloat.RISCV.riscv.F32.convertToInteger
+    vectors: 600
+    oracle_sha256: 26e583ce05c8eb9dd78b889534f5a85aff76f878c381ce5624669e2969ae7d01
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_i64
+    decl: SoftFloat.RISCV.riscv.F32.convertToInteger
+    vectors: 600
+    oracle_sha256: e67f9b43a07c680a417af3e739620a5de9ed8d424df9c541592f2f516805ba87
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_ui64
+    decl: SoftFloat.RISCV.riscv.F32.convertToInteger
+    vectors: 600
+    oracle_sha256: e38c693d079f29bc57f8946d993aa2766d0e6a8cd6044afcfcfa5791d862574a
+    matched: true
+  - rounding_mode: odd
+    op: i32_to_f32
+    decl: SoftFloat.RISCV.riscv.F32.convertFromInt
+    vectors: 372
+    oracle_sha256: d080db94fea420a1428f8902332ea838daf345eccaa2017c163b6eb54726c695
+    matched: true
+  - rounding_mode: odd
+    op: ui32_to_f32
+    decl: SoftFloat.RISCV.riscv.F32.convertFromInt
+    vectors: 372
+    oracle_sha256: e27588e0b99977bb56a18e9c15bf2c52e6654947fbefca2691004036f0962060
+    matched: true
+  - rounding_mode: odd
+    op: i64_to_f32
+    decl: SoftFloat.RISCV.riscv.F32.convertFromInt
+    vectors: 756
+    oracle_sha256: e5c1a3c9bd8307431fe13edc0aa19363a532fafb8f88cc17723c38492bf9ec45
+    matched: true
+  - rounding_mode: odd
+    op: ui64_to_f32
+    decl: SoftFloat.RISCV.riscv.F32.convertFromInt
+    vectors: 756
+    oracle_sha256: 335d2f7d0aafb49b196b58a45b03c242f932a19c407a2c9e4b7ce75ab54dfafb
+    matched: true
+  - rounding_mode: odd
+    op: f64_add
+    decl: SoftFloat.RISCV.riscv.F64.addition
+    vectors: 46464
+    oracle_sha256: e6a07f5732af928eda8a99b8f563edf58926539119ee11adb4a2834870a1fc28
+    matched: true
+  - rounding_mode: odd
+    op: f64_sub
+    decl: SoftFloat.RISCV.riscv.F64.subtraction
+    vectors: 46464
+    oracle_sha256: 85b3c9b19749c6a90179bd6a9effa80a881301a7812584ce64757ca9d2388ed0
+    matched: true
+  - rounding_mode: odd
+    op: f64_mul
+    decl: SoftFloat.RISCV.riscv.F64.multiplication
+    vectors: 46464
+    oracle_sha256: e2cfd96ad8e1f85985b8f1d5b97b275d95d64e95257bc605b172eb737d3d4876
+    matched: true
+  - rounding_mode: odd
+    op: f64_div
+    decl: SoftFloat.RISCV.riscv.F64.division
+    vectors: 46464
+    oracle_sha256: edace7a4c5f09b3a975db6c6b8f96083d4fee072fd7ed353e61c61673b17d97a
+    matched: true
+  - rounding_mode: odd
+    op: f64_sqrt
+    decl: SoftFloat.RISCV.riscv.F64.squareRoot
+    vectors: 768
+    oracle_sha256: dcf3c3485a5584afccaba902e16e4a876ee03443e831a816efd9372e6c0686c0
+    matched: true
+  - rounding_mode: odd
+    op: f64_mulAdd
+    decl: SoftFloat.RISCV.riscv.F64.fusedMultiplyAdd
+    vectors: 6133248
+    oracle_sha256: 19eac87ae64a689d5de37935f4be340d72093b0745e3df66dbcbac595354e8e4
+    matched: true
+  - rounding_mode: odd
+    op: f64_roundToInt
+    decl: SoftFloat.RISCV.riscv.F64.roundToIntegral
+    vectors: 768
+    oracle_sha256: 1a94fe717e41f1dbc22759d4675034b9ec5c7b8aaff5fbc559b22c281ba5eb70
+    matched: true
+  - rounding_mode: odd
+    op: f64_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.F64.roundToIntegral
+    vectors: 768
+    oracle_sha256: 62805658ae8d63b2a1c4a25bacff97bacb2d8cf010de672c0189253297ca50b6
+    matched: true
+  - rounding_mode: odd
+    op: f64_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: 034c1b050a771cfa040253ced0b2c540205b3feffacee2cd77aa6536bd8eb2f2
+    matched: true
+  - rounding_mode: odd
+    op: f64_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F64.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 75db3d79e574df8228247579b532e5f67fc83c7622a742c92ae2dc7aae37a909
+    matched: true
+  - rounding_mode: odd
+    op: f64_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 83bb30ff9c09aa0818186e345d730a7264580ae340a5d18c2219d91966107eba
+    matched: true
+  - rounding_mode: odd
+    op: f64_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: df9e3b8935ab2a54ac5680714772e750df6c30bb15d1c149e52a626944977bdb
+    matched: true
+  - rounding_mode: odd
+    op: f64_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: c0ae8abe82964681a19c1d2a1ff377e5a874d59dc338d1a2903ea629ba46e2ef
+    matched: true
+  - rounding_mode: odd
+    op: f64_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 40ce5648de629c39b2c8d23d43ce32ac9ea76fef91234583922475fbeeefd3e5
+    matched: true
+  - rounding_mode: odd
+    op: f64_to_i32
+    decl: SoftFloat.RISCV.riscv.F64.convertToInteger
+    vectors: 768
+    oracle_sha256: 5f4085419394bfe04f9c40eb50ad230d099014bd15244568671bf74945cc7ca6
+    matched: true
+  - rounding_mode: odd
+    op: f64_to_ui32
+    decl: SoftFloat.RISCV.riscv.F64.convertToInteger
+    vectors: 768
+    oracle_sha256: 1e2d11bed43b1804dfc86ef5a19c0397225621f36361b71f0953436ba204ed65
+    matched: true
+  - rounding_mode: odd
+    op: f64_to_i64
+    decl: SoftFloat.RISCV.riscv.F64.convertToInteger
+    vectors: 768
+    oracle_sha256: 94eca73c5a61a792f2cbe1d8f9a624c53f6338f7cce7d22c850399bb55a44a8b
+    matched: true
+  - rounding_mode: odd
+    op: f64_to_ui64
+    decl: SoftFloat.RISCV.riscv.F64.convertToInteger
+    vectors: 768
+    oracle_sha256: 695908628f26b1b0339157050b7d32460d777adac6af22d7d50a3d38b7150f1f
+    matched: true
+  - rounding_mode: odd
+    op: i32_to_f64
+    decl: SoftFloat.RISCV.riscv.F64.convertFromInt
+    vectors: 372
+    oracle_sha256: 3c7a953970f1e0f3045a3fd92ef364bcd130b168de2d5a3c7288e055a1d064c6
+    matched: true
+  - rounding_mode: odd
+    op: ui32_to_f64
+    decl: SoftFloat.RISCV.riscv.F64.convertFromInt
+    vectors: 372
+    oracle_sha256: 03417b47cdeea24446593adec8aa0d8207d5d96039ace12b49d31e600d5e1e9a
+    matched: true
+  - rounding_mode: odd
+    op: i64_to_f64
+    decl: SoftFloat.RISCV.riscv.F64.convertFromInt
+    vectors: 756
+    oracle_sha256: 90e5a7aa89423931550c7ed3f1bd6f5e7f89ac7f56dcc72c434f3a45f6e82724
+    matched: true
+  - rounding_mode: odd
+    op: ui64_to_f64
+    decl: SoftFloat.RISCV.riscv.F64.convertFromInt
+    vectors: 756
+    oracle_sha256: 044185014757af4404435ad0e4708f4f8777d582304380214935e561a5cc6c81
+    matched: true
+  - rounding_mode: odd
+    op: f128_add
+    decl: SoftFloat.RISCV.riscv.F128.addition
+    vectors: 46464
+    oracle_sha256: d57592f64859c0f8dbff5943bda6346fe1473b72172b98c3c66164a557343136
+    matched: true
+  - rounding_mode: odd
+    op: f128_sub
+    decl: SoftFloat.RISCV.riscv.F128.subtraction
+    vectors: 46464
+    oracle_sha256: f68d400421569a02aa130fcfe97028f32fc798897baf4d86010d528ffbe74ffb
+    matched: true
+  - rounding_mode: odd
+    op: f128_mul
+    decl: SoftFloat.RISCV.riscv.F128.multiplication
+    vectors: 46464
+    oracle_sha256: bf178d0b1cd22aacd06d485533cb137839d32aa7dcbc40d2c5fbef0c42b542cd
+    matched: true
+  - rounding_mode: odd
+    op: f128_div
+    decl: SoftFloat.RISCV.riscv.F128.division
+    vectors: 46464
+    oracle_sha256: f5b332b79689651bbc58151222aeb5dfca608e40d3c763bd67cd76208b6d3901
+    matched: true
+  - rounding_mode: odd
+    op: f128_sqrt
+    decl: SoftFloat.RISCV.riscv.F128.squareRoot
+    vectors: 936
+    oracle_sha256: cc58312bcecec10e7501c94cf06ad01f0e72e0c5e42cc27adc0be4f9c8111701
+    matched: true
+  - rounding_mode: odd
+    op: f128_mulAdd
+    decl: SoftFloat.RISCV.riscv.F128.fusedMultiplyAdd
+    vectors: 6133248
+    oracle_sha256: 4d6e8d39bd539577bf95d652b43921bf5aef49eb5de7898ed5906801b78b8b81
+    matched: true
+  - rounding_mode: odd
+    op: f128_roundToInt
+    decl: SoftFloat.RISCV.riscv.F128.roundToIntegral
+    vectors: 936
+    oracle_sha256: 45568ebe51b06021dbfddbc62c9e1ff71ed12b4e61461860e034c04056e40b33
+    matched: true
+  - rounding_mode: odd
+    op: f128_roundToInt_notexact
+    decl: SoftFloat.RISCV.riscv.F128.roundToIntegral
+    vectors: 936
+    oracle_sha256: 6c5984b1065f0bef64c8f32384965634c6a89af0a6920a5be0bf765851e157a0
+    matched: true
+  - rounding_mode: odd
+    op: f128_eq
+    decl: SoftFloat.RISCV.riscv.instructions.FEQ
+    vectors: 46464
+    oracle_sha256: c7e441e9f058b62a5cad48210bda0125e074e0249a225fa2e8b67ae10e9390a6
+    matched: true
+  - rounding_mode: odd
+    op: f128_eq_signaling
+    decl: SoftFloat.RISCV.riscv.F128.compareSignalingEqual
+    vectors: 46464
+    oracle_sha256: 17540dc9195f001fc71e8d2f2c350b23e27bcdc986361a0eb9709b094a4a988f
+    matched: true
+  - rounding_mode: odd
+    op: f128_lt
+    decl: SoftFloat.RISCV.riscv.instructions.FLT
+    vectors: 46464
+    oracle_sha256: 91c29f810dbc21c4ffc0f65146a6679fdec482d25c5162794dd25e335a43acdb
+    matched: true
+  - rounding_mode: odd
+    op: f128_lt_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLTQ
+    vectors: 46464
+    oracle_sha256: d5348156ea1ec4385823a7d3b05ec2e9d38344004dc945ad817156bf2fec7963
+    matched: true
+  - rounding_mode: odd
+    op: f128_le
+    decl: SoftFloat.RISCV.riscv.instructions.FLE
+    vectors: 46464
+    oracle_sha256: 5a50bd6f2489009b588646e455bfa4b4f4e968207777b9c5156d46dd08ad79bf
+    matched: true
+  - rounding_mode: odd
+    op: f128_le_quiet
+    decl: SoftFloat.RISCV.riscv.instructions.FLEQ
+    vectors: 46464
+    oracle_sha256: 93415105fc9d73c4d10b3706bc03862383bdee50c1e5b4083c583e47bada7fb1
+    matched: true
+  - rounding_mode: odd
+    op: f16_to_f128
+    decl: SoftFloat.RISCV.riscv.F16.convertFormat
+    vectors: 408
+    oracle_sha256: f3ed4b946061cf29cea85ce991d50669fe36efd01c1620b35d66e4dbbc7c8d74
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_f128
+    decl: SoftFloat.RISCV.riscv.F32.convertFormat
+    vectors: 600
+    oracle_sha256: a0c2c3e0646784ca0e082ac685f9cecb6806a1665572029af1ae4bac524b161b
+    matched: true
+  - rounding_mode: odd
+    op: f64_to_f128
+    decl: SoftFloat.RISCV.riscv.F64.convertFormat
+    vectors: 768
+    oracle_sha256: 5549b35ca3e5adeb829f393a2f79a0782090b04ebec5b8e251c2f8bafb50f5a4
+    matched: true
+  - rounding_mode: odd
+    op: f128_to_f16
+    decl: SoftFloat.RISCV.riscv.F128.convertFormat
+    vectors: 936
+    oracle_sha256: 76d6ee9d0e2901a5b91e7bc2fddc335ae717848fe504a012d92164b843994170
+    matched: true
+  - rounding_mode: odd
+    op: f128_to_f32
+    decl: SoftFloat.RISCV.riscv.F128.convertFormat
+    vectors: 936
+    oracle_sha256: 188469181ea165daefe6d3600a254614b99b2c3dfbb41922b33152cabef47cd8
+    matched: true
+  - rounding_mode: odd
+    op: f128_to_f64
+    decl: SoftFloat.RISCV.riscv.F128.convertFormat
+    vectors: 936
+    oracle_sha256: 586e09893baeb6caba19c036e1900d4436a0245ff40b06fe800874ce154d1fa3
+    matched: true
+  - rounding_mode: odd
+    op: f128_to_i32
+    decl: SoftFloat.RISCV.riscv.F128.convertToInteger
+    vectors: 936
+    oracle_sha256: def250c9253ff449a15da02e3d165056322d4fb3e873492792b8208a351f667a
+    matched: true
+  - rounding_mode: odd
+    op: f128_to_ui32
+    decl: SoftFloat.RISCV.riscv.F128.convertToInteger
+    vectors: 936
+    oracle_sha256: 3af69a73279b23853ba7e8661f58cb1daf734950e00f046814352d9c092a400e
+    matched: true
+  - rounding_mode: odd
+    op: f128_to_i64
+    decl: SoftFloat.RISCV.riscv.F128.convertToInteger
+    vectors: 936
+    oracle_sha256: 898b7f2b6db61299809e42f617fcd39fb5d09ab2939ca804b687f58076f5daf5
+    matched: true
+  - rounding_mode: odd
+    op: f128_to_ui64
+    decl: SoftFloat.RISCV.riscv.F128.convertToInteger
+    vectors: 936
+    oracle_sha256: cdc2a89714988571e2439120484da8e9817d69594e6c1da911a2bc226b3f1911
+    matched: true
+  - rounding_mode: odd
+    op: i32_to_f128
+    decl: SoftFloat.RISCV.riscv.F128.convertFromInt
+    vectors: 372
+    oracle_sha256: 02e378795ebac3a041006bc608a35c3416ba7bcb5a56e6e36e22204cb07ee5a7
+    matched: true
+  - rounding_mode: odd
+    op: ui32_to_f128
+    decl: SoftFloat.RISCV.riscv.F128.convertFromInt
+    vectors: 372
+    oracle_sha256: 54dde39d543f36492e9f557b98442d4072cc45a3592443880a697e2e4c7008ec
+    matched: true
+  - rounding_mode: odd
+    op: i64_to_f128
+    decl: SoftFloat.RISCV.riscv.F128.convertFromInt
+    vectors: 756
+    oracle_sha256: 831da019314d4b0ad0676e159da2e3a3fbb0c29b9f59180abf4a1aec6ba84b47
+    matched: true
+  - rounding_mode: odd
+    op: ui64_to_f128
+    decl: SoftFloat.RISCV.riscv.F128.convertFromInt
+    vectors: 756
+    oracle_sha256: f2a47c89004bfbf7a34d37f6ba95fa72a77862143f492dabf60ae6ed534e29b9
+    matched: true
+  - rounding_mode: odd
+    op: f32_to_bf16
+    decl: SoftFloat.RISCV.riscv.F32.convertFormat
+    vectors: 600
+    oracle_sha256: 8c2dd8dbe6079bae8f1fdd289c123b345908dfa37f3c765877981b82c431b0f0
+    matched: true

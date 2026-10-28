@@ -1,0 +1,14 @@
+name = "softfloat-core-operators"
+version = "0.1.0"
+defaultTargets = ["SoftFloatCoreBase", "SoftFloatCoreOperators"]
+
+[leanOptions]
+autoImplicit = false
+
+[[lean_lib]]
+name = "SoftFloatCoreBase"
+globs = ["SoftFloat.Core.Base.*"]
+
+[[lean_lib]]
+name = "SoftFloatCoreOperators"
+globs = ["SoftFloat.Core.Operators.*"]
