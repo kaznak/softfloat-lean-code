@@ -327,7 +327,7 @@ nix develop          # または: direnv allow
 
 ### 組み方と検査
 
-組むのも検査するのも、このリポジトリの直下から `Makefile`（GNU make。devshell にあります）で行います。
+組むのも検査するのも、このリポジトリの直下から `Makefile`（GNU make）で行います。
 
 ```sh
 make deps        # core-verification/ と riscv-verification/ に組み済みの Mathlib を取得する（lake exe cache get）
@@ -337,7 +337,8 @@ make testfloat   # build の後、TestFloat との照合を走らせ直して記
 make help        # 目標の一覧（ほかに clean）
 ```
 
-厳密な開発環境では、その中で回します（`./scripts/restricted-devshell.sh make check`）。
+厳密な開発環境の外で回すと、各目標は自分でその中に入り（`./scripts/restricted-devshell.sh` を通して）、コマンド行で与えた変数を
+連れてそこで回ります。
 
 `make deps` は、検証の側の 2 つのパッケージの `lake-manifest.json` にある Mathlib の版ごとに 1 度だけ組み済みの Mathlib を
 取得し、取得の後に `Mathlib.olean` が無ければ止まります。その前に検証の側のパッケージで直接 `lake build` を走らせると、

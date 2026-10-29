@@ -25,6 +25,8 @@
         in
         {
           default = pkgs.mkShell {
+            # The Makefile runs itself again in this devshell when this is unset.
+            SOFTFLOAT_CODE_SHELL = "1";
             packages = with pkgs; [
               bashInteractive
               coreutils

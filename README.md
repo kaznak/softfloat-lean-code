@@ -370,7 +370,7 @@ run the following:
 
 ### Building and checking
 
-Build and check through the `Makefile` (GNU make; the devshell provides it), from the top of this repository:
+Build and check through the `Makefile` (GNU make), from the top of this repository:
 
 ```sh
 make deps        # fetch the built Mathlib for core-verification/ and riscv-verification/ (lake exe cache get)
@@ -380,7 +380,8 @@ make testfloat   # build, then run the comparison with TestFloat again and rewri
 make help        # the list of targets (also clean)
 ```
 
-In the strict development environment, run them through it (`./scripts/restricted-devshell.sh make check`).
+Run outside the strict development environment, each target enters it by itself (through `./scripts/restricted-devshell.sh`)
+and runs there, with the variables given on the command line.
 
 `make deps` fetches the built Mathlib once for each revision of Mathlib in the `lake-manifest.json` of the two packages of
 the verification, and stops if `Mathlib.olean` is not there afterwards. Running `lake build` directly in a package of the

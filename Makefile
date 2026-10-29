@@ -1,5 +1,6 @@
-# The entry point of the build of this repository (GNU make), run in the
-# devshell (nix develop, or scripts/restricted-devshell.sh make <target>).
+# The entry point of the build of this repository (GNU make). Run outside the
+# devshell, it runs the same goals again in it (scripts/restricted-devshell.sh),
+# passing on the variables given on the command line.
 #
 # Run `make deps` (or any target that needs it) before building: lake build in
 # a package of the verification builds Mathlib from source when its built
@@ -14,6 +15,19 @@ SHELL := bash
 
 code := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 lock := $(code)/.lake-build.lock
+
+# The devshell of this repository sets SOFTFLOAT_CODE_SHELL, and the devshell of
+# the audit repository, which has the same tools, sets SOFTFLOAT_AUDIT_SHELL.
+ifeq ($(SOFTFLOAT_CODE_SHELL)$(SOFTFLOAT_AUDIT_SHELL),)
+goals := $(or $(MAKECMDGOALS),$(.DEFAULT_GOAL))
+.PHONY: $(goals)
+$(firstword $(goals)):
+	exec "$(code)/scripts/restricted-devshell.sh" make -C "$(code)" $(MAKEOVERRIDES) $(goals)
+ifneq ($(words $(goals)),1)
+$(wordlist 2,$(words $(goals)),$(goals)):
+	@:
+endif
+else
 
 # In the order of their requirements.
 packages := core-operators riscv-operators core-verification riscv-verification
@@ -33,7 +47,7 @@ endef
 .PHONY: help deps build check testfloat clean
 
 help:
-	@echo 'Targets (run in the devshell, from code/ or with make -C code):'
+	@echo 'Targets (from code/ or with make -C code; outside the devshell, they run in it):'
 	echo '  help       Print this list (the default target).'
 	echo '  deps       Fetch the built Mathlib for core-verification and riscv-verification'
 	echo '             (lake exe cache get), once for each revision of Mathlib in their'
@@ -101,3 +115,4 @@ clean:
 	for package in $(packages); do
 	    rm -rf "$(code)/$$package/.lake/build"
 	done
+endif
