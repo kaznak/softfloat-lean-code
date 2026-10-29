@@ -16,9 +16,9 @@ SHELL := bash
 code := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 lock := $(code)/.lake-build.lock
 
-# The devshell of this repository sets SOFTFLOAT_CODE_SHELL, and the devshell of
-# the audit repository, which has the same tools, sets SOFTFLOAT_AUDIT_SHELL.
-ifeq ($(SOFTFLOAT_CODE_SHELL)$(SOFTFLOAT_AUDIT_SHELL),)
+# The devshell of this repository sets SOFTFLOAT_CODE_SHELL (so may another
+# devshell that has the same tools).
+ifeq ($(SOFTFLOAT_CODE_SHELL),)
 goals := $(or $(MAKECMDGOALS),$(.DEFAULT_GOAL))
 .PHONY: $(goals)
 $(firstword $(goals)):
