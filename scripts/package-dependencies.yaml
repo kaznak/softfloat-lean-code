@@ -10,13 +10,17 @@
     Each target has its operators and its verification as Lake packages of
     their own. The verification requires the operators of the same target and
     Mathlib, and the verification of RISCV also the verification of Core;
-    nothing else.
+    nothing else. The verification of FloatLib requires its operators, the
+    verification of Core, Mathlib and FloatLib, which it is compared with.
   dependencies:
     softfloat-core-verification:
       requires: [softfloat-core-operators, mathlib]
       only: true
     softfloat-riscv-verification:
       requires: [softfloat-riscv-operators, softfloat-core-verification, mathlib]
+      only: true
+    softfloat-floatlib-verification:
+      requires: [softfloat-floatlib-operators, softfloat-core-verification, mathlib, floatlib]
       only: true
 
 - rule: base-and-operations-depend-on-no-mathlib
@@ -31,6 +35,9 @@
     softfloat-riscv-operators:
       requires: [softfloat-core-operators]
       only: true
+    softfloat-floatlib-operators:
+      requires: [softfloat-core-operators]
+      only: true
     core-base:
       requires: []
       only: true
@@ -43,6 +50,10 @@
     riscv-operators:
       requires: [core-base, core-operators, riscv-base]
       only: true
+    floatlib-operators:
+      requires: [core-base, core-operators]
+      only: true
+      forbids: [floatlib]
 
 - rule: specification-does-not-depend-on-operations
   description: >-
@@ -57,6 +68,10 @@
       requires: [core-spec, core-base, riscv-base]
       only: true
       forbids: [core-operators, riscv-operators]
+    floatlib-spec:
+      requires: [core-spec, core-base, floatlib]
+      only: true
+      forbids: [core-operators, floatlib-operators]
 
 - rule: specification-does-not-depend-on-proof
   description: >-
@@ -80,15 +95,41 @@
       only: true
     riscv-spec:
       forbids: [core-proof, riscv-proof]
+    floatlib-proof:
+      requires: [floatlib-spec, floatlib-operators, core-proof, core-spec, core-operators]
+      only: true
+    floatlib-spec:
+      forbids: [core-proof, floatlib-proof]
 
 - rule: test-depends-only-on-operations
   description: >-
     The testing of RISCV imports only the operations of RISCV, so its
-    executable builds without Mathlib.
+    executable builds without Mathlib. The testing of FloatLib imports only
+    the operations of Core and of FloatLib, and the operations of FloatLib
+    itself seen through the specification, and no proof.
   dependencies:
     riscv-test:
       requires: [riscv-operators]
       only: true
+    floatlib-test:
+      requires: [core-operators, floatlib-operators, floatlib-spec]
+      only: true
+      forbids: [core-proof, floatlib-proof]
+
+- rule: core-and-riscv-do-not-depend-on-floatlib
+  description: >-
+    Neither Core nor RISCV reaches anything of FloatLib, or FloatLib itself,
+    so that the comparison with FloatLib can be cut out mechanically and adds
+    nothing to what Core and RISCV rely on.
+  dependencies:
+    softfloat-core-operators:
+      forbids: [softfloat-floatlib-operators, softfloat-floatlib-verification, floatlib]
+    softfloat-core-verification:
+      forbids: [softfloat-floatlib-operators, softfloat-floatlib-verification, floatlib]
+    softfloat-riscv-operators:
+      forbids: [softfloat-floatlib-operators, softfloat-floatlib-verification, floatlib]
+    softfloat-riscv-verification:
+      forbids: [softfloat-floatlib-operators, softfloat-floatlib-verification, floatlib]
 
 - rule: core-does-not-depend-on-riscv
   description: >-

@@ -30,9 +30,9 @@ endif
 else
 
 # In the order of their requirements.
-packages := core-operators riscv-operators core-verification riscv-verification
+packages := core-operators riscv-operators floatlib-operators core-verification riscv-verification floatlib-verification
 # The packages that require Mathlib.
-verification := core-verification riscv-verification
+verification := core-verification riscv-verification floatlib-verification
 
 # Take the lock on file descriptor 9 for the rest of the recipe, saying so
 # when another build holds it.
@@ -49,11 +49,13 @@ endef
 help:
 	@echo 'Targets (from code/ or with make -C code; outside the devshell, they run in it):'
 	echo '  help       Print this list (the default target).'
-	echo '  deps       Fetch the built Mathlib for core-verification and riscv-verification'
+	echo '  deps       Fetch the built Mathlib for core-verification, riscv-verification'
+	echo '             and floatlib-verification'
 	echo '             (lake exe cache get), once for each revision of Mathlib in their'
 	echo '             lake-manifest.json, and check that Mathlib.olean is there.'
 	echo '  build      deps, then lake build in core-operators, riscv-operators,'
-	echo '             core-verification and riscv-verification, in this order.'
+	echo '             floatlib-operators, core-verification, riscv-verification and'
+	echo '             floatlib-verification, in this order.'
 	echo '  check      build, then scripts/check-claim-build.sh,'
 	echo '             scripts/check-package-dependencies.sh and'
 	echo '             scripts/check-testfloat-record.sh; stops at the first that fails.'

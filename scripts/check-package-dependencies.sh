@@ -27,7 +27,8 @@ Inputs:
     - files
         - <target>-operators/lakefile.toml and
           <target>-verification/lakefile.toml (core-operators/,
-          core-verification/, riscv-operators/ and riscv-verification/), and
+          core-verification/, riscv-operators/, riscv-verification/,
+          floatlib-operators/ and floatlib-verification/), and
           the absence of lakefile.lean there
         - the .lean files of those packages, built here
         - scripts/package-dependencies.yaml: the rules, each with the
@@ -67,11 +68,13 @@ Description:
     [[require]] entries of each lakefile.toml: a require with a path is
     resolved, relative to its package, to one of the packages; a require named
     mathlib with the git repository of Mathlib 4 (or the Reservoir scope
-    leanprover-community) is Mathlib; any other require is something else.
+    leanprover-community) is Mathlib; a require named floatlib with the git
+    repository of FloatLib is FloatLib; any other require is something else.
     The graph of the layers is made of the imports of the modules, read from
     what Lean built (scripts/module-imports.lean), not from the text of the
     sources: a module of SoftFloat reaches the layer of the module it imports,
-    a module of Mathlib is Mathlib, and the modules of Lean itself (Init, Std,
+    a module of Mathlib is Mathlib, a module of FloatLib is FloatLib (named
+    floatlib in the rules), and the modules of Lean itself (Init, Std,
     Lean, Lake) are left out. Lake keeps the directions between packages, but
     nothing in Lean or Lake keeps them between the modules of one package, so
     the layers are judged here.
@@ -143,7 +146,7 @@ PROGRESS "$LINENO" "checking that the built Mathlib was fetched"
 
 # Without the built Mathlib, lake build builds Mathlib from source, which
 # takes hours. make deps fetches it (lake exe cache get).
-for package in core-verification riscv-verification; do
+for package in core-verification riscv-verification floatlib-verification; do
     EMSG="line:$LINENO ERROR the built Mathlib is not in $package/.lake/packages/mathlib; run make deps first."
     [ -e "$based/$package/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean" ]
 done
@@ -244,6 +247,7 @@ jq -n \
         | reduce .[] as $s ([]; if $s == "" or $s == "." then . elif $s == ".." then (if length > 0 then .[:-1] else ["..", .[]] end) else . + [$s] end)
         | join("/");
     def mathlib_git: test("^https://github\\.com/leanprover-community/mathlib4(\\.git)?/?$");
+    def floatlib_git: test("^https://github\\.com/lean-dojo/FloatLib(\\.git)?/?$");
     # The layer of a module: SoftFloat.<Target>.<Layer>... is <target>-<layer>.
     def layer: split(".") as $c
         | if ($c | length) >= 3 and $c[0] == "SoftFloat" then "\($c[1] | ascii_downcase)-\($c[2] | ascii_downcase)" else null end;
@@ -254,10 +258,11 @@ jq -n \
           elif .l | IN("base", "operators") then "\(.t)-operators"
           elif .l | IN("spec", "proof", "claim", "test") then "\(.t)-verification"
           else null end;
-    # What an import reaches: a layer, Mathlib, nothing (Lean itself) or something else.
+    # What an import reaches: a layer, Mathlib, FloatLib, nothing (Lean itself) or something else.
     def reached: (split(".")[0]) as $r
         | if $r | IN("Init", "Std", "Lean", "Lake") then null
           elif $r == "Mathlib" then "mathlib"
+          elif $r == "FloatLib" then "floatlib"
           elif $r == "SoftFloat" and layer != null and (layer | home) != null then layer
           else "other:\(.)" end;
     def closure($direct):
@@ -272,6 +277,7 @@ jq -n \
         | {key: .name, value: {directory: $d, requires: [ .require[] | {name: .name, target: (
             if .path then (.path | resolve($d)) as $p | if $name_of[$p] then $name_of[$p] else "path:\($p)" end
             elif .name == "mathlib" and ((.git // "" | mathlib_git) or (.git == null and .scope == "leanprover-community")) then "mathlib"
+            elif .name == "floatlib" and (.git // "" | floatlib_git) then "floatlib"
             else "other:\(.name)" end) } ]}})
         | from_entries) as $pk
     | ($pk | map_values([ .requires[].target ] | unique)) as $pdirect

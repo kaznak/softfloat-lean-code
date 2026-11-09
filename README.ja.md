@@ -6,8 +6,9 @@
 
 ## パッケージ
 
-このリポジトリは、対象（Core・RISCV）ごとに、演算の側と検証の側の 2 つのパッケージを含みます。Core は対象によらず
-各対象が特殊化して使う部分、RISCV は RISC-V の特殊化と命令の組です。モジュールの名前は
+このリポジトリは、対象（Core・RISCV・FloatLib）ごとに、演算の側と検証の側の 2 つのパッケージを含みます。Core は対象によらず
+各対象が特殊化して使う部分、RISCV は RISC-V の特殊化と命令の組、FloatLib は FloatLib の選択に合わせた特殊化と、Core と
+FloatLib の比較です。モジュールの名前は
 `SoftFloat.<対象>.<層>.…` です。
 
 | パッケージ名 | ディレクトリ | 層（モジュールの頭） | 内容 | Mathlib |
@@ -16,10 +17,14 @@
 | softfloat-core-verification | `core-verification/` | 仕様（`SoftFloat.Core.Spec`）・証明（`SoftFloat.Core.Proof`）・主張（`SoftFloat.Core.Claim`） | 実装が正しいとはどういうことかを実数（`ℝ`）の値と丸めで述べた定義（`Correct`・`FormatCorrect` など）、その証明、最終的に証明される定理（`SoftFloat.Claim.correctness`・`SoftFloat.Claim.uniqueness`）。 | 必要 |
 | softfloat-riscv-operators | `riscv-operators/` | 基盤（`SoftFloat.RISCV.Base`）・演算（`SoftFloat.RISCV.Operators`） | 基盤は、仕様と演算が共有する RISC-V の語彙で、4 つの命令の組の型（スカラの命令の `InstructionOps fmt`、形式の間の変換の `ConversionOps src dst`、ベクタの拡幅の演算の `WideningOps narrow wide`、スカラの命令に無いベクタの要素の演算の `VectorOps fmt`）と、それらと rm の読み替えと形式ごとの関数の組と fflags のビットへの写しを 1 つにまとめた RISC-V の演算の組の型（`RiscvOps`）、丸めモード（`RoundingMode`）、BF16 の形式（`Format.bf16`）。演算は、その RISC-V の値 `riscv`（利用者の入口で、命令は値のフィールドの組のフィールド `(riscv.instructions .binary32).FADD`・`(riscv.conversions .binary64 .binary32).FCVT` などとして呼び、rm の欄と frm からの読み替えは `riscv.decode`、`BitVec` 上の形式ごとの関数の組は `riscv.F16`〜`riscv.F128`、フラグの組から fflags の値への写しは `riscv.toFflags`）と、その下の RISC-V の特殊化の値（`Specialization.riscv`）。結果はビットパターンまで一致。 | 不要 |
 | softfloat-riscv-verification | `riscv-verification/` | 仕様（`SoftFloat.RISCV.Spec`）・証明（`SoftFloat.RISCV.Proof`）・主張（`SoftFloat.RISCV.Claim`）・照合（`SoftFloat.RISCV.Test`） | RISC-V の選択の述語（`RiscvChoices`）、RISC-V にある形式と形式の組、命令の組ごとの正しさ・前提・一致の述語（`InstructionCorrect`・`InstructionAgree` など）とそれを束ねる RISC-V の演算の組の正しさ・一致の述語（`RiscvCorrect`・`RiscvAgree`）と対応の検査、その証明、最終的に証明される定理（`SoftFloat.RISCV.Claim.correctness`・`SoftFloat.RISCV.Claim.uniqueness`）、Berkeley TestFloat（IEEE 754 適合性の検査器）との差分照合（`testfloat/`）。 | 必要 |
+| softfloat-floatlib-operators | `floatlib-operators/` | 演算（`SoftFloat.FloatLib.Operators`） | 算術の演算について [FloatLib](https://github.com/lean-dojo/FloatLib) の選択に合わせた特殊化の値（`Specialization.floatlib`）。Core の演算にこれを渡すと、FloatLib と同じ結果を計算します。 | 不要 |
+| softfloat-floatlib-verification | `floatlib-verification/` | 仕様（`SoftFloat.FloatLib.Spec`）・照合（`SoftFloat.FloatLib.Test`） | 作業中。独立に書かれた検証済みの浮動小数点のライブラリ FloatLib と Core を、加算・減算・乗算・除算・平方根・積和、最近接偶数の丸めで比べます。FloatLib の選択の述語（`FloatLibChoices`）、Core のビット列とフラグと FloatLib の値と状態の間の写像と、それを通して見た FloatLib の演算（`flAdd` など）、選んだ入力での照合（建てるときに評価）を置きます。FloatLib は commit で固定します。 | 必要 |
 
 - パッケージの依存の向きは、`core-operators/` ← `core-verification/`、`core-operators/` ← `riscv-operators/`、
   `riscv-operators/` と `core-verification/` ← `riscv-verification/` です。演算の側は検証の側と Mathlib に依らず、Core は
   RISCV に依りません。
+- `floatlib-operators/` は `core-operators/` に、`floatlib-verification/` は `floatlib-operators/`・`core-verification/`・
+  Mathlib・FloatLib に依ります。Core と RISCV は、これらにも FloatLib にも依りません。
 - 層の向きは、対象の中で、基盤 ← 演算、基盤 ← 仕様、仕様と演算 ← 証明 ← 主張です（仕様は演算と証明に依りません）。
   RISCV の層は Core の同じ層とそれより下の層に依ってよく、照合は RISCV の演算だけに依ります。検証の側の中の向きは
   Lake では保てないので、`scripts/check-package-dependencies.sh` がモジュールの import から確かめます。

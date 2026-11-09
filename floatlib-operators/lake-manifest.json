@@ -1,0 +1,14 @@
+{"version": "1.3.0",
+ "packagesDir": ".lake/packages",
+ "packages":
+ [{"type": "path",
+   "scope": "",
+   "name": "«softfloat-core-operators»",
+   "manifestFile": "lake-manifest.json",
+   "inherited": false,
+   "dir": "../core-operators",
+   "copy": false,
+   "configFile": "lakefile.toml"}],
+ "name": "«softfloat-floatlib-operators»",
+ "lakeDir": ".lake",
+ "fixedToolchain": false}

@@ -6,9 +6,10 @@
 
 ## Packages
 
-For each target (Core and RISCV), this repository contains two packages: one on the operations side and one on the
+For each target (Core, RISCV and FloatLib), this repository contains two packages: one on the operations side and one on the
 verification side. Core is the part that does not depend on the target and that each target specializes; RISCV is the
-RISC-V specialization and the groups of instructions. Module names are `SoftFloat.<target>.<layer>.…`.
+RISC-V specialization and the groups of instructions; FloatLib is the specialization with the choices of FloatLib and the
+comparison of Core with FloatLib. Module names are `SoftFloat.<target>.<layer>.…`.
 
 | Package name | Directory | Layers (module prefixes) | Contents | Mathlib |
 |---|---|---|---|---|
@@ -16,10 +17,14 @@ RISC-V specialization and the groups of instructions. Module names are `SoftFloa
 | softfloat-core-verification | `core-verification/` | Spec (`SoftFloat.Core.Spec`), Proof (`SoftFloat.Core.Proof`), Claim (`SoftFloat.Core.Claim`) | Definitions that state what it means for an implementation to be correct, in terms of real (`ℝ`) values and rounding (`Correct`, `FormatCorrect`, and others), their proofs, and the theorems finally proved (`SoftFloat.Claim.correctness` and `SoftFloat.Claim.uniqueness`). | Needed |
 | softfloat-riscv-operators | `riscv-operators/` | Base (`SoftFloat.RISCV.Base`), Operators (`SoftFloat.RISCV.Operators`) | Base is the RISC-V vocabulary shared by the specification and the operations: the types of the four groups of instructions (`InstructionOps fmt` for scalar instructions, `ConversionOps src dst` for conversions between formats, `WideningOps narrow wide` for vector widening operations, and `VectorOps fmt` for vector element operations not among the scalar instructions); the type of the RISC-V group of operations (`RiscvOps`), which bundles these with the decoding of rm, the per-format groups of functions, and the map to the bits of fflags; the rounding mode (`RoundingMode`); and the BF16 format (`Format.bf16`). Operators are the RISC-V value `riscv` (the entry point for users: instructions are called as fields of the groups that are fields of the value, such as `(riscv.instructions .binary32).FADD` and `(riscv.conversions .binary64 .binary32).FCVT`; the decoding of the rm field and frm is `riscv.decode`; the per-format groups of functions on `BitVec` are `riscv.F16` to `riscv.F128`; and the map from a set of flags to the value of fflags is `riscv.toFflags`) and, beneath it, the value of the RISC-V specialization (`Specialization.riscv`). Results match down to the bit pattern. | Not needed |
 | softfloat-riscv-verification | `riscv-verification/` | Spec (`SoftFloat.RISCV.Spec`), Proof (`SoftFloat.RISCV.Proof`), Claim (`SoftFloat.RISCV.Claim`), Test (`SoftFloat.RISCV.Test`) | The predicate of the RISC-V choices (`RiscvChoices`); the formats and pairs of formats that RISC-V has; the predicates of correctness, preconditions and agreement for each group of instructions (`InstructionCorrect`, `InstructionAgree`, and others) and the predicates of correctness and agreement of the RISC-V group of operations that bundle them (`RiscvCorrect` and `RiscvAgree`), with the coverage checks; their proofs; the theorems finally proved (`SoftFloat.RISCV.Claim.correctness` and `SoftFloat.RISCV.Claim.uniqueness`); and differential comparison against Berkeley TestFloat (an IEEE 754 conformance tester) (`testfloat/`). | Needed |
+| softfloat-floatlib-operators | `floatlib-operators/` | Operators (`SoftFloat.FloatLib.Operators`) | The value of the specialization with the choices of [FloatLib](https://github.com/lean-dojo/FloatLib) for the arithmetic operations (`Specialization.floatlib`), which the operations of Core take to compute what FloatLib computes. | Not needed |
+| softfloat-floatlib-verification | `floatlib-verification/` | Spec (`SoftFloat.FloatLib.Spec`), Test (`SoftFloat.FloatLib.Test`) | Work in progress: the comparison of Core with FloatLib, a verified floating-point library written independently, on addition, subtraction, multiplication, division, square root and fused multiply-add, rounded to nearest with ties to even. The predicate of the choices of FloatLib (`FloatLibChoices`); the maps between the bit strings and flags of Core and the values and status of FloatLib, with the operations of FloatLib seen through them (`flAdd` and others); and a comparison on chosen inputs, evaluated while building. FloatLib is fixed by its commit. | Needed |
 
 - The dependencies between packages go `core-operators/` ← `core-verification/`, `core-operators/` ← `riscv-operators/`, and
   `riscv-operators/` and `core-verification/` ← `riscv-verification/`. The operations side depends on neither the verification
   side nor Mathlib, and Core does not depend on RISCV.
+- `floatlib-operators/` depends on `core-operators/`, and `floatlib-verification/` on `floatlib-operators/`,
+  `core-verification/`, Mathlib and FloatLib. Neither Core nor RISCV depends on them or on FloatLib.
 - Within a target, the layers go Base ← Operators, Base ← Spec, and Spec and Operators ← Proof ← Claim (Spec depends on neither
   Operators nor Proof). A RISCV layer may depend on the same layer of Core and the layers below it, and Test depends only on the
   RISCV Operators. The directions inside the verification side cannot be enforced by Lake, so
