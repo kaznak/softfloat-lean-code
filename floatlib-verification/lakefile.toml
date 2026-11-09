@@ -4,7 +4,7 @@ version = "0.1.0"
 # without a `module` header imports them. The files here do not use the module
 # system.
 allowNonModules = true
-defaultTargets = ["SoftFloatFloatLibSpec", "SoftFloatFloatLibProof", "SoftFloatFloatLibTest"]
+defaultTargets = ["SoftFloatFloatLibSpec", "SoftFloatFloatLibProof", "SoftFloatFloatLibClaim", "SoftFloatFloatLibTest"]
 
 [leanOptions]
 autoImplicit = false
@@ -37,10 +37,15 @@ name = "SoftFloatFloatLibSpec"
 globs = ["SoftFloat.FloatLib.Spec.+"]
 
 # The proofs: the specialization floatlib is valid and has the choices of
-# FloatLib.
+# FloatLib, and the operations of FloatLib meet the specification of Core.
 [[lean_lib]]
 name = "SoftFloatFloatLibProof"
 globs = ["SoftFloat.FloatLib.Proof.+"]
+
+# The theorems finally proved, and the checks of their statements and axioms.
+[[lean_lib]]
+name = "SoftFloatFloatLibClaim"
+globs = ["SoftFloat.FloatLib.Claim.*"]
 
 # Comparisons on chosen inputs, evaluated while building. They are not proofs.
 [[lean_lib]]

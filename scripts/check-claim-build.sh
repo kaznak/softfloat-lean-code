@@ -13,7 +13,7 @@ pname=$(basename -- "$0")
 print_help() {
     cat <<EOF
 Name:
-    $pname - Judge whether the claims of Core and RISCV build, with the checks
+    $pname - Judge whether the claims of Core, RISCV and FloatLib build, with the checks
     inside their builds, and whether the kernel accepts them again when they
     are replayed from what was built
 
@@ -48,11 +48,12 @@ Outputs:
            the output of each build or replay that failed are in the record.
 
 Description:
-    The claims are SoftFloat.Core.Claim, in core-verification/, and
-    SoftFloat.RISCV.Claim, in riscv-verification/; each package is built in its
-    own directory with its default targets, which include the modules that
-    import the claim and run its checks, SoftFloat.Core.Claim.Checked and
-    SoftFloat.RISCV.Claim.Checked. The builds carry checks that run as part of
+    The claims are SoftFloat.Core.Claim, in core-verification/,
+    SoftFloat.RISCV.Claim, in riscv-verification/, and SoftFloat.FloatLib.Claim,
+    in floatlib-verification/; each package is built in its own directory with
+    its default targets, which include the modules that import the claim and
+    run its checks, SoftFloat.Core.Claim.Checked,
+    SoftFloat.RISCV.Claim.Checked and SoftFloat.FloatLib.Claim.Checked. The builds carry checks that run as part of
     them: in each of these modules, checkClaimStatements (the statements of
     the constants of the namespace of the claim whose types are propositions
     use only definitions of the layers allowed and the core of Lean) and
@@ -154,7 +155,7 @@ PROGRESS "$LINENO" "building the claims"
 status=built
 code=0
 : >"$tmpd/packages"
-for package in core-verification riscv-verification; do
+for package in core-verification riscv-verification floatlib-verification; do
     if (cd "$based/$package" && lake build) >"$tmpd/build.$package" 2>&1; then
         printf '%s\tbuilt\n' "$package" >>"$tmpd/packages"
     else
@@ -194,6 +195,7 @@ if [ "$status" = built ]; then
     done <<EOF
 core-verification SoftFloat.Core.Claim SoftFloat.Claim.correctness SoftFloat.Claim.uniqueness
 riscv-verification SoftFloat.RISCV.Claim SoftFloat.RISCV.Claim.correctness SoftFloat.RISCV.Claim.uniqueness
+floatlib-verification SoftFloat.FloatLib.Claim SoftFloat.FloatLib.Claim.meetsSpec SoftFloat.FloatLib.Claim.agreement SoftFloat.FloatLib.Claim.witness
 EOF
 fi
 
