@@ -96,7 +96,7 @@
     riscv-spec:
       forbids: [core-proof, riscv-proof]
     floatlib-proof:
-      requires: [floatlib-spec, floatlib-operators, core-proof, core-spec, core-operators]
+      requires: [floatlib-spec, floatlib-operators, core-proof, core-spec, core-operators, floatlib]
       only: true
     floatlib-spec:
       forbids: [core-proof, floatlib-proof]
